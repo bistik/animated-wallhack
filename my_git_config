@@ -1,2 +1,2 @@
-git config --global alias.ls 'show --pretty="format:" --name-status'
+git config --global alias.ls 'show --pretty="format:%h - %ar" --name-status'
 git config --global alias.llog 'log --pretty=format:"%Cgreen%h%Creset %C(yellow)%an%Creset %ar : %s"'
