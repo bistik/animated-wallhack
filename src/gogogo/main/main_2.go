@@ -2,7 +2,7 @@ package main
 
 import (
     "gogogo/fridge/banana"
-    "gogogo/ridge/potato"
+    "gogogo/fridge/potato"
 )
 
 func main() {
@@ -13,20 +13,20 @@ func show_summary() {
         println("Hohoho")
         banana := get_banana()
         println(banana.Id)
-        println(banana.basket[0].Name)
+        println(banana.Basket[0].Name)
 }
 
-func get_banana() Banana {
-        foo := Banana {
+func get_banana() banana.Banana {
+        foo := banana.Banana {
                 Id: "122333",
                 Win: 1,
         }
-        bar := Potato {
+        bar := potato.Potato {
                 Name: "Bane",
                 Kda: "2-3-18",
                 Team: 1,
         }
-        foo.basket[0] = bar
+        foo.Basket[0] = bar
         return foo
 }
 

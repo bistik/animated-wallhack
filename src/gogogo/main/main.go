@@ -1,6 +1,13 @@
 package main
 
-import "gogogo/fridge"
+import "gogogo"
 
-function main() {
+func main() {
+        gogogo.Hello()
+        gogogo.Bye()
+        test()
+}
+
+func test() {
+        println("test")
 }
