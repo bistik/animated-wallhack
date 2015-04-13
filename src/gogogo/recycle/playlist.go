@@ -8,4 +8,5 @@ func main() {
         println("I can't go for that - Hall and Oates")
         println("Everyday - Buddy Holly")
         println("Too much heaven - Bee Gees")
+        println("Lets hear it for the boy - Footloose")
 }
