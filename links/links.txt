@@ -1,0 +1,5 @@
+Specify a files encoding
+http://www.perl.com/pub/2012/05/perlunicook-specify-a-files-encoding.html
+
+JSONP
+http://en.wikipedia.org/wiki/JSONP
