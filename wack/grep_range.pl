@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-use Term::ANSIColor;
+use Term::ANSIColor qw(:constants);
 
 main();
 
@@ -21,25 +21,44 @@ sub main {
 
     open my $fh, $file_to_grep or die "Can't open $file_to_grep: $!";
 
-    my ($out, $is_grabbing) = ('', 0);
+    my $is_grabbing = 0;
+    my $line_num = 0;
 
     while (my $line = <$fh>) {
-        if ($line =~ /$start/ and !$is_grabbing) {
+
+        $line_num++;
+
+        if ($line =~ /(?<start>$start)/ and !$is_grabbing) {
                 $is_grabbing = 1;
-                $out .= $line;
+                print YELLOW, $line_num, "\t", RESET;
+                print_colored_match($line, $+{start}, $line_num);
                 next;
         }
 
-        $out .= $line if $is_grabbing;
-
-        last if $line =~ /$end/ and $is_grabbing;
+        if ($is_grabbing) {
+            print YELLOW, $line_num, "\t", RESET;
+            if ($line =~ /(?<end>$end)/) {
+                print_colored_match($line, $+{end}, $line_num);
+                last;
+            } else {
+                print $line;
+            }
+        }
     }
+}
 
-    print $out;
+sub print_colored_match {
+    my ($line, $match, $line_num) = @_;
+    my ($start, $end) = split /$match/, $line;
+
+    print $start;
+    print BOLD, GREEN, $match, RESET;
+    print $end;
+
 }
 
 sub usage {
-    print "\nUsage: ./$0 file start end";
+    print BOLD, GREEN, "\nUsage: ./$0 file start end", RESET;
     print "\n   file: file to grep";
     print "\n  start: pattern to mark start of search";
     print "\n    end: pattern to mark end of search\n";
