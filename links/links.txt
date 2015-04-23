@@ -3,3 +3,6 @@ http://www.perl.com/pub/2012/05/perlunicook-specify-a-files-encoding.html
 
 JSONP
 http://en.wikipedia.org/wiki/JSONP
+
+HTTP basics
+https://developer.mozilla.org/en-US/docs/Web/HTTP
