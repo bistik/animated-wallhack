@@ -1,13 +1,21 @@
 #!/usr/bin/env perl
 
+use Getopt::Std;
 use Term::ANSIColor qw(:constants);
 
 main();
 
 sub main {
-    my $file_to_grep = @ARGV[0];
-    my $start = quotemeta $ARGV[1];
-    my $end = quotemeta $ARGV[2];
+    my %opt;
+    getopts('q', \%opt);
+
+    my $file_to_grep = $ARGV[0];
+    my $start = $ARGV[1];
+    my $end = $ARGV[2];
+    if($opt{q}) {
+        $start = quotemeta $start;
+        $end = quotemeta $end;
+    }
 
     unless ($file_to_grep) {
         usage();
@@ -54,7 +62,6 @@ sub print_colored_match {
     print $start;
     print BOLD, GREEN, $match, RESET;
     print $end;
-
 }
 
 sub usage {

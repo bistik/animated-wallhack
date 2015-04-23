@@ -1,0 +1,2 @@
+-add command line option to disable quotemeta
+maybe use GetOpt::Long or GetOpt::Std
