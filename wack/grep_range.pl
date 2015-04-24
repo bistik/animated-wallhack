@@ -7,7 +7,7 @@ main();
 
 sub main {
     my %opt;
-    getopts('q', \%opt);
+    getopts('qn', \%opt);
 
     my $file_to_grep = $ARGV[0];
     my $start = $ARGV[1];
@@ -34,17 +34,17 @@ sub main {
 
     while (my $line = <$fh>) {
 
-        $line_num++;
+        $line_num++ if $opt{n};
 
         if ($line =~ /(?<start>$start)/ and !$is_grabbing) {
                 $is_grabbing = 1;
-                print YELLOW, $line_num, "\t", RESET;
+                print YELLOW, $line_num, "\t", RESET if $opt{n};
                 print_colored_match($line, $+{start}, $line_num);
                 next;
         }
 
         if ($is_grabbing) {
-            print YELLOW, $line_num, "\t", RESET;
+            print YELLOW, $line_num, "\t", RESET if $opt{n};
             if ($line =~ /(?<end>$end)/) {
                 print_colored_match($line, $+{end}, $line_num);
                 last;
@@ -57,7 +57,7 @@ sub main {
 
 sub print_colored_match {
     my ($line, $match, $line_num) = @_;
-    my ($start, $end) = split /$match/, $line;
+    my ($start, $end) = split /$match/, $line, 2;
 
     print $start;
     print BOLD, GREEN, $match, RESET;
