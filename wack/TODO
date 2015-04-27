@@ -3,3 +3,4 @@
 -make line number optional
 -add case insensitive option
 add option to have multiple matches (looks complicated)
+add option to search from the end to the start (might need to slurp the file into an array then read backwards or reverse <FILE>)
