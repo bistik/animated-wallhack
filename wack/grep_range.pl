@@ -1,6 +1,10 @@
 #!/usr/bin/env perl
 
+use strict;
+use warnings;
 use Getopt::Std;
+use autodie;
+use English qw( -no_match_vars );
 use Term::ANSIColor qw(:constants);
 
 main();
@@ -27,7 +31,7 @@ sub main {
         exit 0;
     }
 
-    open my $fh, $file_to_grep or die "Can't open $file_to_grep: $!";
+    open my $fh, '<', $file_to_grep;
 
     my $is_grabbing = 0;
     my $line_num = 0;
@@ -72,11 +76,11 @@ sub grep_line {
     my ($line, $pattern, $not_case_sensitive) = @_;
     if($not_case_sensitive) {
         if ($line =~ /(?<match>$pattern)/i) {
-                return $+{match};
+                return $LAST_PAREN_MATCH{match};
         }
     } else {
         if ($line =~ /(?<match>$pattern)/) {
-                return $+{match};
+                return $LAST_PAREN_MATCH{match};
         }
     }
     return 0;
