@@ -30,7 +30,7 @@ sub main {
         my $line = '';
 
         for(1..$w) {
-            if (int(rand(10)) < 8) {
+            if (int(rand(100)) < 80) {
                 $line .= $az_set[int(rand(scalar @az_set))];
             } else {
                 $line .= $punc_set[int(rand(scalar @punc_set))];
