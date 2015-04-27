@@ -1,2 +1,5 @@
 -add command line option to disable quotemeta
-maybe use GetOpt::Long or GetOpt::Std
+-maybe use GetOpt::Long or GetOpt::Std
+-make line number optional
+-add case insensitive option
+add option to have multiple matches (looks complicated)

@@ -7,7 +7,7 @@ main();
 
 sub main {
     my %opt;
-    getopts('qn', \%opt);
+    getopts('qni', \%opt);
 
     my $file_to_grep = $ARGV[0];
     my $start = $ARGV[1];
@@ -36,17 +36,21 @@ sub main {
 
         $line_num++ if $opt{n};
 
-        if ($line =~ /(?<start>$start)/ and !$is_grabbing) {
+        unless ($is_grabbing) {
+            # we haven't found start match
+            my $match_start = grep_line( $line, $start, $opt{i});
+            if ($match_start) {
                 $is_grabbing = 1;
                 print YELLOW, $line_num, "\t", RESET if $opt{n};
-                print_colored_match($line, $+{start}, $line_num);
+                print_colored_match($line, $match_start, $line_num);
                 next;
-        }
-
-        if ($is_grabbing) {
+            }
+        } else {
+            # grab text until we find end match
             print YELLOW, $line_num, "\t", RESET if $opt{n};
-            if ($line =~ /(?<end>$end)/) {
-                print_colored_match($line, $+{end}, $line_num);
+            my $match_end = grep_line( $line, $end, $opt{i});
+            if ($match_end) {
+                print_colored_match($line, $match_end, $line_num);
                 last;
             } else {
                 print $line;
@@ -62,6 +66,20 @@ sub print_colored_match {
     print $start;
     print BOLD, GREEN, $match, RESET;
     print $end;
+}
+
+sub grep_line {
+    my ($line, $pattern, $not_case_sensitive) = @_;
+    if($not_case_sensitive) {
+        if ($line =~ /(?<match>$pattern)/i) {
+                return $+{match};
+        }
+    } else {
+        if ($line =~ /(?<match>$pattern)/) {
+                return $+{match};
+        }
+    }
+    return 0;
 }
 
 sub usage {
