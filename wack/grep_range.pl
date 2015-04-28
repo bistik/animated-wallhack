@@ -90,5 +90,10 @@ sub usage {
     print BOLD, GREEN, "\nUsage: ./$0 file start end", RESET;
     print "\n   file: file to grep";
     print "\n  start: pattern to mark start of search";
-    print "\n    end: pattern to mark end of search\n";
+    print "\n    end: pattern to mark end of search";
+    print BOLD, GREEN, "\n\nOptions", RESET;
+    print "\n     -q: flag to enable escaping of regex special character. Example: '.' becomes '\\.'. This is disabled by default.";
+    print "\n     -n: flag to display line numbers. Default has no line numbers.";
+    print "\n     -i: flag to make patterns case-insensitive. Patterns are case-sensitive by default.";
+    print "\n";
 }
