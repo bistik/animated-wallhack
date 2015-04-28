@@ -6,3 +6,9 @@ http://en.wikipedia.org/wiki/JSONP
 
 HTTP basics
 https://developer.mozilla.org/en-US/docs/Web/HTTP
+
+Essential Perl Hacker's Toolkit
+http://www.slideshare.net/hercynium/the-essential-perl-hackers-toolkit?related=1
+
+Perl bag of tricks
+http://www.slideshare.net/brian_d_foy/bag-of-tricks?related=1
