@@ -12,3 +12,6 @@ http://www.slideshare.net/hercynium/the-essential-perl-hackers-toolkit?related=1
 
 Perl bag of tricks
 http://www.slideshare.net/brian_d_foy/bag-of-tricks?related=1
+
+Guide to solving perl problems
+http://archive.oreilly.com/pub/a/perl/excerpts/9780596527242/brians-guide.html
