@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Getopt::Std;
 use autodie;
-use English qw( -no_match_vars );
+use English qw(-no_match_vars);
 use Term::ANSIColor qw(:constants);
 
 main();
@@ -13,9 +13,9 @@ sub main {
     my %opt;
     getopts('qni', \%opt);
 
-    my $file_to_grep = $ARGV[0];
-    my $start = $ARGV[1];
-    my $end = $ARGV[2];
+    my ($file_to_grep, $start, $end) = @ARGV;
+    $start ||= '.';
+    $end   ||= '.';
     if($opt{q}) {
         $start = quotemeta $start;
         $end = quotemeta $end;
@@ -94,6 +94,6 @@ sub usage {
     print BOLD, GREEN, "\n\nOptions", RESET;
     print "\n     -q: flag to enable escaping of regex special character. Example: '.' becomes '\\.'. This is disabled by default.";
     print "\n     -n: flag to display line numbers. Default has no line numbers.";
-    print "\n     -i: flag to make patterns case-insensitive. Patterns are case-sensitive by default.";
+    print "\n     -i: ignore-case, searches are case-sensitive by default.";
     print "\n";
 }
