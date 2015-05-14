@@ -29,3 +29,4 @@ http://blogs.perl.org/users/ovid
 
 chocolatey
 https://chocolatey.org/packages/youtube-dl
+https://chocolatey.org/packages/autohotkey
