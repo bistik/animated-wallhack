@@ -22,3 +22,10 @@ https://www.kickstarter.com/projects/1598272670/chip-the-worlds-first-9-computer
 doto
 https://www.youtube.com/watch?v=TK0veCzPIjg
 http://www.reddit.com/r/redditdota2league/
+
+perl blogs
+http://blogs.perl.org
+http://blogs.perl.org/users/ovid
+
+chocolatey
+https://chocolatey.org/packages/youtube-dl
