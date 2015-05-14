@@ -30,3 +30,6 @@ http://blogs.perl.org/users/ovid
 chocolatey
 https://chocolatey.org/packages/youtube-dl
 https://chocolatey.org/packages/autohotkey
+
+github
+https://github.com/barrett777/Heroes.ReplayParser
