@@ -36,3 +36,6 @@ https://github.com/barrett777/Heroes.ReplayParser
 
 api
 www.getpostman.com
+
+perl lexing
+http://www.perl.com/pub/2006/01/05/parsing.html
