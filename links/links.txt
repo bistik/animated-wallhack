@@ -39,3 +39,6 @@ www.getpostman.com
 
 perl lexing
 http://www.perl.com/pub/2006/01/05/parsing.html
+
+MJD talks perl
+http://perl.plover.com/yak/
