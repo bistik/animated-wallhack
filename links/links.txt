@@ -42,3 +42,6 @@ http://www.perl.com/pub/2006/01/05/parsing.html
 
 MJD talks perl
 http://perl.plover.com/yak/
+
+git from bottom up pdf
+http://ftp.newartisans.com/pub/git.from.bottom.up.pdf
