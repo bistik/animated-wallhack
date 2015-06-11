@@ -48,3 +48,6 @@ http://ftp.newartisans.com/pub/git.from.bottom.up.pdf
 
 perl cpan module getting started
 http://blogs.perl.org/users/itcharlie/2015/06/what-i-learned-at-perl-miniconf.html
+
+cpan Task::Kensho
+https://metacpan.org/pod/Task::Kensho
