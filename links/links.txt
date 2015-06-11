@@ -45,3 +45,6 @@ http://perl.plover.com/yak/
 
 git from bottom up pdf
 http://ftp.newartisans.com/pub/git.from.bottom.up.pdf
+
+perl cpan module getting started
+http://blogs.perl.org/users/itcharlie/2015/06/what-i-learned-at-perl-miniconf.html
