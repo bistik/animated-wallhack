@@ -51,3 +51,6 @@ http://blogs.perl.org/users/itcharlie/2015/06/what-i-learned-at-perl-miniconf.ht
 
 cpan Task::Kensho
 https://metacpan.org/pod/Task::Kensho
+
+laptop
+https://snapguide.com/guides/use-your-old-laptop/
