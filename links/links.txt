@@ -54,3 +54,6 @@ https://metacpan.org/pod/Task::Kensho
 
 laptop
 https://snapguide.com/guides/use-your-old-laptop/
+
+unix-haters-handbook (page 64 of 360)
+http://www.catonmat.net/ftp/unix-haters-handbook.pdf
