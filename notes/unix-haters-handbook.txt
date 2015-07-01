@@ -5,3 +5,6 @@ house of cards - organization or plan that can easily be destroyed
 heebie-jeebies
 MIT-MAGIC-COOKIE
 canard
+Unix was designed to please programmers, whereas the Macwas designed to please users. (Windows, on the other hand, was designed to please accountants, but that’s another story.)
+cpio - unix backup utility program
+find does not follow symlinks, cause then any link that pointed to a directory higher up the tree would end up in an endless loop
