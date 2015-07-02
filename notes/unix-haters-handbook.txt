@@ -25,3 +25,14 @@ The noted linguistic theorist Benjamin Whorf said that our language determines w
 
 In comes the sysadmin, who “solves” the problem by rebooting the system because the boot process will clear out all the crud that accumulated in the  /tmp  directory.
 So now you know why the boot process cleans out /tmp.
+
+perl -e "fork while fork" &
+
+Unix doesn’t store type information with each file.
+Instead, Unix forces the user to encode this information in the file’s name!
+
+piece de resistance
+
+cp - does not copy the symbolic link itself, it copies the contents of files pointed to by symbolic links
+
+use tar if you want to copy a hierarchy
