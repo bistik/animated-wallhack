@@ -55,7 +55,7 @@ https://metacpan.org/pod/Task::Kensho
 laptop
 https://snapguide.com/guides/use-your-old-laptop/
 
-unix-haters-handbook (page 315 of 360)
+unix-haters-handbook (page 330 of 360)
 http://www.catonmat.net/ftp/unix-haters-handbook.pdf
 
 perl sucks!
@@ -66,3 +66,9 @@ http://conqueringthecommandline.com/book
 
 arp-scan
 http://askubuntu.com/questions/143055/how-to-detect-a-mobile-device-when-it-connects-to-a-home-wifi-network
+
+raspberry-pi
+https://leanpub.com/RPiMRE/read
+
+a primer on sql
+https://leanpub.com/aprimeronsql/read
