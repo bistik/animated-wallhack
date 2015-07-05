@@ -55,7 +55,7 @@ https://metacpan.org/pod/Task::Kensho
 laptop
 https://snapguide.com/guides/use-your-old-laptop/
 
-unix-haters-handbook (page 330 of 360)
+unix-haters-handbook (page 345 of 360)
 http://www.catonmat.net/ftp/unix-haters-handbook.pdf
 
 perl sucks!

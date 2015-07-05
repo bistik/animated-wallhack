@@ -36,3 +36,17 @@ piece de resistance
 cp - does not copy the symbolic link itself, it copies the contents of files pointed to by symbolic links
 
 use tar if you want to copy a hierarchy
+
+$ exec ls
+
+The world is Unix...
+
+Ken Thompson talk at UnixWorld Software Development Forum
+
+Bored of the Rings - parody of Lord of the Rings
+
+Unix is a parody of Multics
+
+C is a parody of Pascal?
+
+Rise of Worse is Better
