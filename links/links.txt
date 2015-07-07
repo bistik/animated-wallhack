@@ -70,7 +70,7 @@ http://askubuntu.com/questions/143055/how-to-detect-a-mobile-device-when-it-conn
 raspberry-pi
 https://leanpub.com/RPiMRE/read
 
-a primer on sql (section 1.1 of 12.2)
+a primer on sql (section 2.4 of 12.2)
 https://leanpub.com/aprimeronsql/read
 
 sql reference book
