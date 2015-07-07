@@ -72,3 +72,6 @@ https://leanpub.com/RPiMRE/read
 
 a primer on sql
 https://leanpub.com/aprimeronsql/read
+
+seven seconds or less
+http://www.amazon.com/Seven-Seconds-Less-Season-Phoenix/dp/0743298136
