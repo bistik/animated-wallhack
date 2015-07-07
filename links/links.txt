@@ -76,3 +76,5 @@ https://leanpub.com/aprimeronsql/read
 sql reference book
 http://atibook.ir/dl/en/Engineering/Computer Science/9781435457515_the_language_of_sql.pdf
 
+seven seconds or less
+http://www.amazon.com/Seven-Seconds-Less-Season-Phoenix/dp/0743298136
