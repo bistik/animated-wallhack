@@ -1,0 +1,7 @@
+primary key vs unique key:
+PK cannot have NULL value, UK can be NULL (but only one).
+You can define only one PK (although PK can be a combination of multiple fields)
+You can have multiple UK fields
+
+CTAS is not straight forward in sqlite, PK and UK are not copied into the new table.
+CTAS - Create Table As
