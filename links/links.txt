@@ -70,7 +70,7 @@ http://askubuntu.com/questions/143055/how-to-detect-a-mobile-device-when-it-conn
 raspberry-pi
 https://leanpub.com/RPiMRE/read
 
-a primer on sql (section 4.3 of 12.2)
+a primer on sql (section 6.3 of 12.2)
 https://leanpub.com/aprimeronsql/read
 
 sql reference book
@@ -81,3 +81,6 @@ http://www.amazon.com/Seven-Seconds-Less-Season-Phoenix/dp/0743298136
 
 but I can't use CPAN
 http://shadow.cat/blog/matt-s-trout/but-i-cant-use-cpan/
+
+culture and empire: digital revolution (ch1 of ch8)
+cultureandempire.com/html/cande.html
