@@ -78,3 +78,6 @@ http://atibook.ir/dl/en/Engineering/Computer Science/9781435457515_the_language_
 
 seven seconds or less
 http://www.amazon.com/Seven-Seconds-Less-Season-Phoenix/dp/0743298136
+
+but I can't use CPAN
+http://shadow.cat/blog/matt-s-trout/but-i-cant-use-cpan/
