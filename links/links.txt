@@ -90,3 +90,6 @@ http://perltricks.com/article/179/2015/7/1/Basic-network-hacking-with-Perl
 
 tech hacks/tips
 http://carlcheo.com/
+
+basketball tips
+http://reddit.com/r/basketballtips
