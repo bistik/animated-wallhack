@@ -84,3 +84,12 @@ http://shadow.cat/blog/matt-s-trout/but-i-cant-use-cpan/
 
 culture and empire: digital revolution (ch1 of ch8)
 cultureandempire.com/html/cande.html
+
+perl basic network hack
+http://perltricks.com/article/179/2015/7/1/Basic-network-hacking-with-Perl
+
+tech hacks/tips
+http://carlcheo.com/
+
+basketball tips
+http://reddit.com/r/basketballtips
