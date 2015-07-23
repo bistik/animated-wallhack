@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#container {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #ccc;
+}
+#site-list {
+  width: 20%;
+  background-color: #c00;
+}
+
+#site-view {
+  width: 80%;
+  background-color: #0c0;
+}
