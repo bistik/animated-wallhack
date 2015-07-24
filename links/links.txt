@@ -103,3 +103,6 @@ http://brainpump.net/video/paul-bloom-the-psychology-of-everything
 
 ES6, javascript
 https://hacks.mozilla.org/2015/07/es6-in-depth-classes/
+
+readability api
+https://www.readability.com/developers/api/parser
