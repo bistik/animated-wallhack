@@ -106,3 +106,12 @@ https://hacks.mozilla.org/2015/07/es6-in-depth-classes/
 
 readability api
 https://www.readability.com/developers/api/parser
+
+add to my rss list
+http://feeds.pinboard.in/rss/popular/
+
+flexbox
+http://learnlayout.com/flexbox.html
+
+racket buckets
+http://docs.racket-lang.org/index.html
