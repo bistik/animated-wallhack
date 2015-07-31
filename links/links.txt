@@ -115,3 +115,6 @@ http://learnlayout.com/flexbox.html
 
 racket buckets
 http://docs.racket-lang.org/index.html
+
+common web server setups
+https://www.digitalocean.com/community/tutorials/5-common-server-setups-for-your-web-application
