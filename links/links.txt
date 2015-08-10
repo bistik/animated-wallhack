@@ -121,3 +121,7 @@ https://www.digitalocean.com/community/tutorials/5-common-server-setups-for-your
 
 svg
 https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
+
+
+racket resc
+https://www.reddit.com/r/Racket/comments/31fkcv/new_to_racket_again/
