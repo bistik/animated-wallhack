@@ -16,6 +16,8 @@ http://www.spin.ph/rss
 https://news.ycombinator.com/rss
 );
 
+binmode STDOUT, ":encoding(UTF-8)";
+
 foreach my $uri (@uris) {
     say "[$uri]";
     my $response = $ua->get($uri);
