@@ -125,3 +125,6 @@ https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
 
 racket resc
 https://www.reddit.com/r/Racket/comments/31fkcv/new_to_racket_again/
+
+perl utf-8 crash course
+http://weblog.bulknews.net/post/59317757811/perl-utf-8-crash-course
