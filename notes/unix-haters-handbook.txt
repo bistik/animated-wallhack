@@ -1,0 +1,52 @@
+Sturgeon's law - 90% of any field is crap.
+
+$ cat - - -
+
+ad hominem - personalan na!
+
+house of cards - organization or plan that can easily be destroyed
+
+heebie-jeebies
+
+MIT-MAGIC-COOKIE
+
+canard
+
+Unix was designed to please programmers, whereas the Macwas designed to please users. (Windows, on the other hand, was designed to please accountants, but that’s another story.)
+
+cpio - unix backup utility program
+
+find does not follow symlinks, cause then any link that pointed to a directory higher up the tree would end up in an endless loop
+
+If you drop a frog into briskly boiling water it will immediately jump out.
+Boiling water is hot, you know. However, if you put a frog into cold water and slowly bring it to a boil, the frog won’t notice and will be boiled to death. 
+
+The noted linguistic theorist Benjamin Whorf said that our language determines what concepts we can think
+
+In comes the sysadmin, who “solves” the problem by rebooting the system because the boot process will clear out all the crud that accumulated in the  /tmp  directory.
+So now you know why the boot process cleans out /tmp.
+
+perl -e "fork while fork" &
+
+Unix doesn’t store type information with each file.
+Instead, Unix forces the user to encode this information in the file’s name!
+
+piece de resistance
+
+cp - does not copy the symbolic link itself, it copies the contents of files pointed to by symbolic links
+
+use tar if you want to copy a hierarchy
+
+$ exec ls
+
+The world is Unix...
+
+Ken Thompson talk at UnixWorld Software Development Forum
+
+Bored of the Rings - parody of Lord of the Rings
+
+Unix is a parody of Multics
+
+C is a parody of Pascal?
+
+Rise of Worse is Better

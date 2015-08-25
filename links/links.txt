@@ -55,7 +55,7 @@ https://metacpan.org/pod/Task::Kensho
 laptop
 https://snapguide.com/guides/use-your-old-laptop/
 
-unix-haters-handbook (page 126 of 360)
+unix-haters-handbook (page 345 of 360)
 http://www.catonmat.net/ftp/unix-haters-handbook.pdf
 
 perl sucks!
@@ -63,3 +63,71 @@ http://www.slideshare.net/2shortplanks/perl-sucks?qid=f7d1c511-1a55-4db5-8ae0-71
 
 how cheap can solar get
 http://rameznaam.com/2015/08/10/how-cheap-can-solar-get-very-cheap-indeed/
+
+conquering the commandline book (page 0 of 298)
+http://conqueringthecommandline.com/book
+
+arp-scan
+http://askubuntu.com/questions/143055/how-to-detect-a-mobile-device-when-it-connects-to-a-home-wifi-network
+
+raspberry-pi
+https://leanpub.com/RPiMRE/read
+
+a primer on sql (section 6.3 of 12.2)
+https://leanpub.com/aprimeronsql/read
+
+sql reference book
+http://atibook.ir/dl/en/Engineering/Computer Science/9781435457515_the_language_of_sql.pdf
+
+seven seconds or less
+http://www.amazon.com/Seven-Seconds-Less-Season-Phoenix/dp/0743298136
+
+but I can't use CPAN
+http://shadow.cat/blog/matt-s-trout/but-i-cant-use-cpan/
+
+culture and empire: digital revolution (ch1 of ch8)
+cultureandempire.com/html/cande.html
+
+perl basic network hack
+http://perltricks.com/article/179/2015/7/1/Basic-network-hacking-with-Perl
+
+tech hacks/tips
+http://carlcheo.com/
+
+basketball tips
+http://reddit.com/r/basketballtips
+
+learn grunt
+http://24ways.org/2013/grunt-is-not-weird-and-hard/
+http://mattbailey.io/a-beginners-guide-to-grunt-redux/
+
+pyschology
+http://brainpump.net/video/paul-bloom-the-psychology-of-everything
+
+ES6, javascript
+https://hacks.mozilla.org/2015/07/es6-in-depth-classes/
+
+readability api
+https://www.readability.com/developers/api/parser
+
+add to my rss list
+http://feeds.pinboard.in/rss/popular/
+
+flexbox
+http://learnlayout.com/flexbox.html
+
+racket buckets
+http://docs.racket-lang.org/index.html
+
+common web server setups
+https://www.digitalocean.com/community/tutorials/5-common-server-setups-for-your-web-application
+
+svg
+https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths
+
+
+racket resc
+https://www.reddit.com/r/Racket/comments/31fkcv/new_to_racket_again/
+
+perl utf-8 crash course
+http://weblog.bulknews.net/post/59317757811/perl-utf-8-crash-course
