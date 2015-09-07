@@ -1,0 +1,84 @@
+== Info: STATE: INIT => CONNECT handle 0x6000570a0; line 1048 (connection #-5000) 
+== Info: Added connection 0. The cache now contains 1 members
+== Info:   Trying 93.184.216.34...
+== Info: STATE: CONNECT => WAITCONNECT handle 0x6000570a0; line 1101 (connection #0) 
+== Info: Connected to example.com (93.184.216.34) port 80 (#0)
+== Info: STATE: WAITCONNECT => SENDPROTOCONNECT handle 0x6000570a0; line 1197 (connection #0) 
+== Info: STATE: SENDPROTOCONNECT => DO handle 0x6000570a0; line 1215 (connection #0) 
+=> Send header, 75 bytes (0x4b)
+0000: GET / HTTP/1.1
+0010: Host: example.com
+0023: User-Agent: curl/7.42.0
+003c: Accept: */*
+0049: 
+== Info: STATE: DO => DO_DONE handle 0x6000570a0; line 1305 (connection #0) 
+== Info: STATE: DO_DONE => WAITPERFORM handle 0x6000570a0; line 1432 (connection #0) 
+== Info: STATE: WAITPERFORM => PERFORM handle 0x6000570a0; line 1445 (connection #0) 
+== Info: HTTP 1.1 or later with persistent connection, pipelining supported
+<= Recv header, 37 bytes (0x25)
+0000: HTTP/1.1 302 authenticationrequired
+<= Recv header, 37 bytes (0x25)
+0000: Date: Wed, 27 May 2015 03:34:40 GMT
+<= Recv header, 171 bytes (0xab)
+0000: Location: http://10.157.129.23:9090/mwg-internal/de5fs23hu73ds/p
+0040: lugin?target=Auth&reason=Auth&ClientID=1517181443&ttl=600&url=aH
+0080: R0cDovL2V4YW1wbGUuY29tLw==&rnd=1432697680
+<= Recv header, 24 bytes (0x18)
+0000: Connection: Keep-Alive
+<= Recv header, 25 bytes (0x19)
+0000: Content-Type: text/html
+<= Recv header, 25 bytes (0x19)
+0000: Cache-Control: no-cache
+<= Recv header, 22 bytes (0x16)
+0000: Content-Length: 2836
+<= Recv header, 2 bytes (0x2)
+0000: 
+<= Recv data, 2836 bytes (0xb14)
+0000: <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "
+0040: http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">.<!--. 
+0080:  Message.TemplateName: authenticationrequired.  Message.Language
+00c0: : ..  Fallback templates.-->.<html>..<!--Head-->.<head>.<meta co
+0100: ntent="text/html; charset=UTF-8" http-equiv="Content-Type">.<met
+0140: a http-equiv="X-UA-Compatible" content="IE=7" />.<script src="/m
+0180: wg-internal/de5fs23hu73ds/files/javascript/sw.js" type="text/jav
+01c0: ascript" ></script>.<title>McAfee Web Gateway - Notification - A
+0200: uthentication Required</title>.<link rel="stylesheet" href="/mwg
+0240: -internal/de5fs23hu73ds/files/default/SystemStyleSheet.css" />.<
+0280: /head>.<!--/Head-->..<!--Body-->.<body onload="swOnLoad();">..<t
+02c0: able class="errorPageContainer" background='/mwg-internal/de5fs2
+0300: 3hu73ds/files/default/img/bg_body.gif' >.<tr>.<td colspan="2">.<
+0340: img src='/mwg-internal/de5fs23hu73ds/files/default/img/logo_mwg.
+0380: png' />.</td>.<tr/>.<tr>.<td>..</td>.<td>.<!--Contents-->.<h1 cl
+03c0: ass='nodisplayAuthentication Required'>Authentication Required</
+0400: h1>.<h1>Authentication Required</h1>.<!--Content-->.<table class
+0440: ="contentTable">.  <tr>.    <td class="contentData">.      You m
+0480: ust be authenticated to access this URL..    </td>.  </tr>.</tab
+04c0: le>.    .<script language="javascript" type="text/javascript">. 
+0500:   urlprotocol = "http";.   statuscode=403;..   if(statuscode==40
+0540: 1 && urlprotocol == "ftp"){.      document.write("<form name=\"f
+0580: tpform\" method=\"get\" action=\"\">");.      document.write("<t
+05c0: able class=\"contentData\">");.      document.write("<tr><td cla
+0600: ss=\"contentData\" colspan=2>Please enter your credentials in th
+0640: e form below and click \"Access FTP\" button if your browser doe
+0680: sn't present authentication prompt for FTP sites.</td></tr>");. 
+06c0:      document.write("<tr><td class=\"contentData\">Username:</td
+0700: ><td><input type=\"text\" id=\"ftpUsername\" name=\"ftpUsername\
+0740: " size=40 /></td></tr>");.      document.write("<tr><td class=\"
+0780: contentData\">Password:</td><td><input type=\"password\" id=\"ft
+07c0: pPassword\" name=\"ftpPassword\" size=40 /></td></tr>");.      d
+0800: ocument.write("<tr><td class=\"contentData\" colspan=2 align=cen
+0840: ter><input type=\"button\" onclick=\"redirectToFTP();\" value=\"
+0880: Access FTP\" /></td></tr>");.      document.write("</table>");. 
+08c0:      document.write("</form>");.   }.   .   function redirectToF
+0900: TP(){.      var username=unescape(document.getElementById("ftpUs
+0940: ername").value);.      var password=unescape(document.getElement
+0980: ById("ftpPassword").value);.      location.href = "ftp://"+usern
+09c0: ame+":"+password+"@example.com:80/".   }.</script>.<!--/Content-
+0a00: ->..<!--Info-->.<table class="infoTable">.  <tr>.    <td class="
+0a40: infoData">.      <b>URL: </b><script type="text/javascript">brea
+0a80: k_line("http://example.com/");</script><br />.    </td>.  </tr>.
+0ac0: </table>.<!--/Info-->..<!--/Contents-->.<br/>...<br/>..</body>.<
+0b00: !--/Body-->.</html>.
+== Info: STATE: PERFORM => DONE handle 0x6000570a0; line 1615 (connection #0) 
+== Info: Connection #0 to host example.com left intact
+== Info: Expire cleared
