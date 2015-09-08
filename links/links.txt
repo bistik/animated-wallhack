@@ -133,3 +133,6 @@ http://weblog.bulknews.net/post/59317757811/perl-utf-8-crash-course
 
 chrome apps
 https://developer.chrome.com/apps/app_codelab_intro
+
+purge plays poof
+https://www.youtube.com/watch?v=mXDAX1KYjHc&feature=youtu.be
