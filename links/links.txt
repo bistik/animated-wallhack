@@ -136,3 +136,6 @@ https://developer.chrome.com/apps/app_codelab_intro
 
 purge plays poof
 https://www.youtube.com/watch?v=mXDAX1KYjHc&feature=youtu.be
+
+vlc not so known features
+http://lifehacker.com/the-best-hidden-features-of-vlc-1654434241
