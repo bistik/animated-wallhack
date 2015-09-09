@@ -1,0 +1,24 @@
+body {
+background-color: #fafafa;
+color: #1a1a1a;
+}
+div {
+vertical-align: top;
+border: 1px solid #f00;
+}
+.row {
+min-width:500px;
+width: 100%;
+}
+.wrap_row5 {
+display: inline-block;
+}
+.slot {
+display: inline-block;
+width: 35px;
+height: 28px;
+margin: 5px;
+background-color: #cacaca;
+color: #fafafa;
+text-decoration: none;
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "dotes.html".
+ -->
+<html>
+  <head>
+    <title>Tilted</title>
+    <link rel="stylesheet" type="text/css" href="dotes.css" media="screen" />
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="dotes.js"></script>
+  </head>
+  <body>
+    <div class="row">
+        <div class="wrap_row5">
+            <a class="slot" href="#">+</a>
+        </div>
+        <div class="wrap_row5">
+            <div>
+                <a class="slot" href="#">DB1</a>
+                <a class="slot" href="#">DB2</a>
+                <a class="slot" href="#">DB3</a>
+                <a class="slot" href="#">DB4</a>
+                <a class="slot" href="#">DB5</a>
+            </div>
+            <div>
+                <a class="slot" href="#">Me1</a>
+                <a class="slot" href="#">Me2</a>
+            </div>
+            <div>
+                <a class="slot" href="#">It1</a>
+                <a class="slot" href="#">It2</a>
+                <a class="slot" href="#">It3</a>
+                <a class="slot" href="#">It4</a>
+                <a class="slot" href="#">It5</a>
+                <a class="slot" href="#">It6</a>
+                <a class="slot" href="#">It7</a>
+            </div>
+        </div>
+    </div>
+    <div>+</div>
+    <div>+</div>
+    <div>+</div>
+    <div>+</div>
+  </body>
+</html>
