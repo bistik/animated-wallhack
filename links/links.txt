@@ -142,3 +142,4 @@ http://lifehacker.com/the-best-hidden-features-of-vlc-1654434241
 
 ajax cross site
 https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+https://developer.chrome.com/extensions/messaging#external-webpage
