@@ -4,7 +4,6 @@ color: #1a1a1a;
 }
 div {
 vertical-align: top;
-border: 1px solid #f00;
 }
 .row {
 min-width:500px;
@@ -18,12 +17,30 @@ display: inline-block;
 display: inline-block;
 width: 35px;
 height: 28px;
-margin: 5px;
 background-color: #cacaca;
 color: #fafafa;
 text-decoration: none;
 }
+.dialog {
+position: absolute;
+display: inline-block;
+min-width: 300px;
+margin-left: 50px;
+margin-top: -28px;
+z-index: 6;
+background-color: #cfc;
+}
 .art, .axe,  .alch, .am {
+display: inline-block;
+width: 65px;
+height: 65px;
 background-image: url('sample_sprite.png');
 background-repeat: no-repeat;
+border: 1px solid #f00;
+}
+.art {
+background-position: 0px 0px;
+}
+.alch {
+background-position: 0px -65px;
 }
