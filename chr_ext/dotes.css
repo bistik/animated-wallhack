@@ -11,6 +11,7 @@ min-width:500px;
 width: 100%;
 }
 .wrap_row5 {
+position: relative;
 display: inline-block;
 }
 .slot {
@@ -21,4 +22,8 @@ margin: 5px;
 background-color: #cacaca;
 color: #fafafa;
 text-decoration: none;
+}
+.art, .axe,  .alch, .am {
+background-image: url('sample_sprite.png');
+background-repeat: no-repeat;
 }
