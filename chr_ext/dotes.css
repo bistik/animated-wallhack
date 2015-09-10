@@ -27,6 +27,7 @@ display: inline-block;
 min-width: 300px;
 margin-left: 50px;
 margin-top: -28px;
+margin-bottom: 10px;
 z-index: 6;
 background-color: #cfc;
 }
@@ -43,4 +44,7 @@ background-position: 0px 0px;
 }
 .alch {
 background-position: 0px -65px;
+}
+.am {
+background-position: 0px -130px;
 }

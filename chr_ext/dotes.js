@@ -8,7 +8,8 @@ Dotes.app = (function() {
 
     app.H = {
         art:  { name: 'art',  text: 'Aba'  },
-        alch: { name: 'alch', text: 'Alch' }
+        alch: { name: 'alch', text: 'Alch' },
+        am:   { name: 'am',   text: 'Am'   }
     };
     app.I = {
         tan: { name: 'tan', text: 'Tan' },
@@ -54,7 +55,8 @@ Dotes.app = (function() {
         var items   = [];
         var names   = [
             app.H.art,
-            app.H.alch
+            app.H.alch,
+            app.H.am
         ];
         names.forEach(function(name) {
             var a       = document.createElement("a");
