@@ -10,8 +10,10 @@
     "default_popup": "dotes.html",
     "default_title": "Woohoo!"
   },
+
   "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/"
+    "https://ajax.googleapis.com/",
+    "storage"
   ]
 }

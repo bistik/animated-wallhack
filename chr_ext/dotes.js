@@ -9,8 +9,10 @@ Dotes.app = (function() {
     app.H = {
         art:  { name: 'art',  text: 'Aba'  },
         alch: { name: 'alch', text: 'Alch' },
+        aa:   { name: 'aa',   text: 'Aa'   },
         am:   { name: 'am',   text: 'Am'   }
     };
+
     app.I = {
         tan: { name: 'tan', text: 'Tan' },
         cla: { name: 'cla', text: 'Cla' },
@@ -50,6 +52,11 @@ Dotes.app = (function() {
         parentNode.appendChild(frag);
     };
 
+    app.savePick = function(pick) {
+        chrome.storage.sync.set({'pick': pick}, function() {
+        });
+    };
+
     /* create the item menu inside dialog */
     app.createDialogItems = function () {
         var items   = [];
@@ -63,6 +70,7 @@ Dotes.app = (function() {
             var text    = document.createTextNode(name.text);
             a.className = name.name;
             a.appendChild(text);
+            a.setAttribute('href', '#');
             items.push(a);
         });
 
@@ -78,6 +86,7 @@ Dotes.app = (function() {
         }
     };
 
+    /* main */
     app.onDOMContentLoaded = function() {
         var pickers = document.getElementsByClassName('picker');
         var dialog  = document.getElementById('dialog');
