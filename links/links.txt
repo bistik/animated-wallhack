@@ -147,3 +147,5 @@ https://developer.chrome.com/extensions/messaging#external-webpage
 css properties reference
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
 
+chrome apps on mobile
+https://developer.chrome.com/apps/chrome_apps_on_mobile
