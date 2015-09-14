@@ -52,12 +52,6 @@ Dotes.app = (function() {
         pickerNode.parentNode.appendChild(frag);
     };
 
-    app.savePick = function(pick) {
-        chrome.storage.sync.set({'pick': pick}, function() {
-        });
-    };
-
-
     /* create the item menu inside dialog */
     app.createDialogItems = function (pickerNode) {
         var items   = [];
@@ -76,6 +70,9 @@ Dotes.app = (function() {
             a.addEventListener('click', function() { 
                 app.debug(pickerNode);
                 pickerNode.className = "slot " + this.className;
+                // load dbuff counters
+                // load profile counters
+                // load item counters
             });
             items.push(a);
         });
