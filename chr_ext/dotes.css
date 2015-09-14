@@ -6,7 +6,7 @@ div {
 vertical-align: top;
 }
 .row {
-min-width:500px;
+min-width: 600px;
 width: 100%;
 }
 .wrap_row5 {
@@ -15,8 +15,8 @@ display: inline-block;
 }
 .slot {
 display: inline-block;
-width: 35px;
-height: 28px;
+width: 65px;
+height: 65px;
 background-color: #cacaca;
 color: #fafafa;
 text-decoration: none;
@@ -24,20 +24,19 @@ text-decoration: none;
 .dialog {
 position: absolute;
 display: inline-block;
-min-width: 300px;
-margin-left: 50px;
-margin-top: -28px;
+min-width: 500px;
+margin-left: 65px;
+margin-top: -65px;
 margin-bottom: 10px;
 z-index: 6;
 background-color: #cfc;
 }
-.art, .axe,  .alch, .am {
+.art, .aa,  .alch, .am {
 display: inline-block;
 width: 65px;
 height: 65px;
 background-image: url('sample_sprite.png');
 background-repeat: no-repeat;
-border: 1px solid #f00;
 }
 .art {
 background-position: 0px 0px;
@@ -47,4 +46,7 @@ background-position: 0px -65px;
 }
 .am {
 background-position: 0px -130px;
+}
+.aa {
+background-position: 0px -195px;
 }

@@ -30,7 +30,7 @@ Dotes.app = (function() {
     };
 
     /* show dialog when '+' is clicked */
-    app.showDialog = function (parentNode) {
+    app.showDialog = function (pickerNode) {
         var frag    = document.createDocumentFragment();
         var div     = document.createElement("div");
         var h4      = document.createElement("h4");
@@ -41,7 +41,7 @@ Dotes.app = (function() {
         div.appendChild(h4);
         div.className = 'dialog';
 
-        var items = app.createDialogItems();
+        var items = app.createDialogItems(pickerNode);
 
         for (var i=0, len=items.length; i<len; i++) {
             div.appendChild(items[i]);
@@ -49,7 +49,7 @@ Dotes.app = (function() {
 
         frag.appendChild(div);
 
-        parentNode.appendChild(frag);
+        pickerNode.parentNode.appendChild(frag);
     };
 
     app.savePick = function(pick) {
@@ -57,13 +57,15 @@ Dotes.app = (function() {
         });
     };
 
+
     /* create the item menu inside dialog */
-    app.createDialogItems = function () {
+    app.createDialogItems = function (pickerNode) {
         var items   = [];
         var names   = [
             app.H.art,
             app.H.alch,
-            app.H.am
+            app.H.am,
+            app.H.aa
         ];
         names.forEach(function(name) {
             var a       = document.createElement("a");
@@ -71,6 +73,10 @@ Dotes.app = (function() {
             a.className = name.name;
             a.appendChild(text);
             a.setAttribute('href', '#');
+            a.addEventListener('click', function() { 
+                app.debug(pickerNode);
+                pickerNode.className = "slot " + this.className;
+            });
             items.push(a);
         });
 
@@ -96,7 +102,7 @@ Dotes.app = (function() {
         for (var i=0, len = pickers.length; i<len; i++) {
             pickers[i].addEventListener("click", function() {
                 app.removeDialogs();
-                app.showDialog(this.parentNode);
+                app.showDialog(this);
             }, false);
         }
     };
