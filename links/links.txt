@@ -149,3 +149,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
 
 chrome apps on mobile
 https://developer.chrome.com/apps/chrome_apps_on_mobile
+
+ta tips
+https://www.reddit.com/r/DotA2/comments/3e4mbr/templar_assassin_tips/
