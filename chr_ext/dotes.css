@@ -15,8 +15,8 @@ display: inline-block;
 }
 .slot {
 display: inline-block;
-width: 65px;
-height: 65px;
+width: 59px;
+height: 33px;
 background-color: #cacaca;
 color: #fafafa;
 text-decoration: none;
@@ -25,28 +25,31 @@ text-decoration: none;
 position: absolute;
 display: inline-block;
 min-width: 500px;
-margin-left: 65px;
-margin-top: -65px;
+margin-left: 59px;
+margin-top: -33px;
 margin-bottom: 10px;
 z-index: 6;
 background-color: #cfc;
 }
-.art, .aa,  .alch, .am {
+.art, .aa,  .alch, .am, .ab {
 display: inline-block;
-width: 65px;
-height: 65px;
-background-image: url('sample_sprite.png');
+width: 59px;
+height: 33px;
+background-image: url('mugshot_sprite.png');
 background-repeat: no-repeat;
 }
 .art {
 background-position: 0px 0px;
 }
 .alch {
-background-position: 0px -65px;
+background-position: -59px 0px;
 }
 .am {
-background-position: 0px -130px;
+background-position: -118px 0px;
 }
 .aa {
-background-position: 0px -195px;
+background-position: -177px 0px;
+}
+.ab {
+background-position: -236px 0px;
 }
