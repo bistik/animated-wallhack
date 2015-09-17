@@ -29,6 +29,29 @@ Dotes.app = (function() {
         if (DEBUG) console.log(message);
     };
 
+    /* row for slot picker */
+    app.createPicker = function() {
+        var frag      = document.createDocumentFragment();
+        var div       = document.createElement("div");
+        div.className = 'wrap_row5';
+
+        var a       = document.createElement("a");
+        var text    = document.createTextNode('Choose');
+        a.appendChild(text);
+        a.className = 'slot picker';
+        a.setAttribute('href', '#');
+
+        a.addEventListener("click", function() {
+            app.removeDialogs();
+            app.showDialog(this);
+        }, false);
+
+        div.appendChild(a);
+        frag.appendChild(div);
+
+        return frag;
+    };
+
     /* row of counters, create a div with <a> */
     app.createRow = function (items) {
         var frag      = document.createDocumentFragment();
@@ -81,8 +104,11 @@ Dotes.app = (function() {
             app.H.am,
             app.H.aa
         ];
-        var rowParent = pickerNode.parentNode;
-        app.debug(rowParent);
+        /* rowParent --> <div class="row">
+                            <div class="wrap_row">
+                                <a>pickerNode</a>
+        */
+        var rowParent = pickerNode.parentNode.parentNode;
         names.forEach(function(name) {
             var a       = document.createElement("a");
             var text    = document.createTextNode(name.text);
@@ -94,17 +120,16 @@ Dotes.app = (function() {
                 // load profile counters
                 // load item counters
 
-                // close the parentDialog
+                // close the pick Dialog
                 app.removeDialogs();
 
                 // remove previously loaded counter rows
-                rowParent.removeChild(rowParent.lastChild);
-                /*while(rowParent.childNodes.length > 1) {
-                    app.debug('removing childNode...');
-                    rowParent.removeChild(rowParent.lastChild);        
-                }*/
+                if(rowParent.getElementsByClassName("wrap_row5").length > 1) {
+                    var deleteRow = rowParent.getElementsByClassName("wrap_row5")[1];
+                    deleteRow.parentNode.removeChild(deleteRow);
+                }
 
-                // load dbuff counters
+                // load counters
                 rowParent.appendChild(app.createRow([{text: "Aa"}]));
             });
             items.push(a);
