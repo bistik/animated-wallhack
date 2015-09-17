@@ -29,6 +29,26 @@ Dotes.app = (function() {
         if (DEBUG) console.log(message);
     };
 
+    /* row of counters, create a div with <a> */
+    app.createRow = function (items) {
+        var frag      = document.createDocumentFragment();
+        var div       = document.createElement("div");
+        div.className = 'wrap_row5';
+
+        items.forEach(function(item) {
+            var a       = document.createElement("a");
+            var text    = document.createTextNode(item.text);
+            a.appendChild(text);
+            a.className = 'slot';
+            a.setAttribute('href', '#');
+            div.appendChild(a);
+        });
+
+        frag.appendChild(div);
+
+        return frag;
+    };
+
     /* show dialog when '+' is clicked */
     app.showDialog = function (pickerNode) {
         var frag    = document.createDocumentFragment();
@@ -61,6 +81,8 @@ Dotes.app = (function() {
             app.H.am,
             app.H.aa
         ];
+        var rowParent = pickerNode.parentNode;
+        app.debug(rowParent);
         names.forEach(function(name) {
             var a       = document.createElement("a");
             var text    = document.createTextNode(name.text);
@@ -68,11 +90,22 @@ Dotes.app = (function() {
             a.appendChild(text);
             a.setAttribute('href', '#');
             a.addEventListener('click', function() { 
-                app.debug(pickerNode);
                 pickerNode.className = "slot " + this.className;
-                // load dbuff counters
                 // load profile counters
                 // load item counters
+
+                // close the parentDialog
+                app.removeDialogs();
+
+                // remove previously loaded counter rows
+                rowParent.removeChild(rowParent.lastChild);
+                /*while(rowParent.childNodes.length > 1) {
+                    app.debug('removing childNode...');
+                    rowParent.removeChild(rowParent.lastChild);        
+                }*/
+
+                // load dbuff counters
+                rowParent.appendChild(app.createRow([{text: "Aa"}]));
             });
             items.push(a);
         });
@@ -80,11 +113,11 @@ Dotes.app = (function() {
         return items;
     };
 
+
     /* before we show a dialog, remove all those displayed */
     app.removeDialogs = function() {
         var dialogs = document.getElementsByClassName('dialog');
         for (var i = 0, len = dialogs.length; i < len; i++) {
-            app.debug('removing dialog...');
             dialogs[i].parentNode.removeChild(dialogs[i]);
         }
     };
@@ -93,8 +126,6 @@ Dotes.app = (function() {
     app.onDOMContentLoaded = function() {
         var pickers = document.getElementsByClassName('picker');
         var dialog  = document.getElementById('dialog');
-
-        app.debug(pickers.length);
 
         for (var i=0, len = pickers.length; i<len; i++) {
             pickers[i].addEventListener("click", function() {
