@@ -7,10 +7,10 @@ Dotes.app = (function() {
     var DEBUG = 1;
 
     app.H = {
-        art:  { name: 'art',  text: 'Aba'  },
+        art:  { name: 'art',  text: 'Aba' },
         alch: { name: 'alch', text: 'Alch' },
-        aa:   { name: 'aa',   text: 'Aa'   },
-        am:   { name: 'am',   text: 'Am'   }
+        aa:   { name: 'aa',   text: 'Aa' },
+        am:   { name: 'am',   text: 'Am' }
     };
 
     app.I = {
@@ -18,12 +18,11 @@ Dotes.app = (function() {
         cla: { name: 'cla', text: 'Cla' },
     };
 
-    app.draft = {
-        h : [
-            { h: app.H.art,  dbuff: [app.H.alch], prof: [app.H.alch], items: [app.H.tan] },    
-            { h: app.H.alch, dbuff: [app.H.art],  prof: [app.H.art],  items: [app.H.tan] },    
-        ],
-    };
+    app.draft = {};
+    app.draft[app.H.art.name]  = { dbuff: [app.H.alch], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.alch.name] = { dbuff: [app.H.art, app.H.aa],  prof: [app.H.art],  items: [app.H.tan] };
+    app.draft[app.H.aa.name]   = { dbuff: [app.H.art], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.am.name]   = { dbuff: [app.H.alch, app.H.art], prof: [app.H.alch], items: [app.H.tan] };
 
     app.debug = function(message) {
         if (DEBUG) console.log(message);
@@ -62,7 +61,7 @@ Dotes.app = (function() {
             var a       = document.createElement("a");
             var text    = document.createTextNode(item.text);
             a.appendChild(text);
-            a.className = 'slot';
+            a.className = 'slot ' + item.name;
             a.setAttribute('href', '#');
             div.appendChild(a);
         });
@@ -117,6 +116,8 @@ Dotes.app = (function() {
             a.setAttribute('href', '#');
             a.addEventListener('click', function() { 
                 pickerNode.className = "slot " + this.className;
+                pickerNode.removeChild(pickerNode.firstChild);
+                pickerNode.appendChild(text);
                 // load profile counters
                 // load item counters
 
@@ -130,7 +131,7 @@ Dotes.app = (function() {
                 }
 
                 // load counters
-                rowParent.appendChild(app.createRow([{text: "Aa"}]));
+                rowParent.appendChild(app.createRow(app.draft[name.name].dbuff));
             });
             items.push(a);
         });
