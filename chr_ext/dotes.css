@@ -31,7 +31,7 @@ margin-bottom: 10px;
 z-index: 6;
 background-color: #cfc;
 }
-.art, .aa,  .alch, .am, .ab,
+.art, .aa,  .alch, .am, .ab, .ax,
 .bs, .bm, .br, .bw, .bb, .bh, .ba, .bt {
 display: inline-block;
 width: 59px;
@@ -54,27 +54,30 @@ background-position: -177px 0px;
 .ab {
 background-position: -236px 0px;
 }
-.bs {
+.ax {
 background-position: -295px 0px;
 }
-.bm {
+.bs {
 background-position: -354px 0px;
 }
-.br {
+.bm {
 background-position: -413px 0px;
 }
-.bw {
+.br {
 background-position: -472px 0px;
 }
-.bb {
-background-position: -531 0px;
+.bw {
+background-position: -531px 0px;
 }
-.bh {
+.bb {
 background-position: 0px -33px;
 }
-.ba {
+.bh {
 background-position: 0px -66px;
 }
-.bt {
+.ba {
 background-position: 0px -99px;
+}
+.bt {
+background-position: 0px -132px;
 }

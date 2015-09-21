@@ -11,6 +11,7 @@ Dotes.app = (function() {
         alch: { name: 'alch', text: 'Alch' },
         aa:   { name: 'aa',   text: 'Aa' },
         am:   { name: 'am',   text: 'Am' },
+        ax:   { name: 'ax',   text: 'Ax' },
         bs:   { name: 'bs',   text: 'Bl' },
         bm:   { name: 'bm',   text: 'Be' },
         br:   { name: 'br',   text: 'Br' },
@@ -31,6 +32,7 @@ Dotes.app = (function() {
     app.draft[app.H.alch.name] = { dbuff: [app.H.art, app.H.aa],  prof: [app.H.art],  items: [app.H.tan] };
     app.draft[app.H.aa.name]   = { dbuff: [app.H.bh], prof: [app.H.alch], items: [app.H.tan] };
     app.draft[app.H.am.name]   = { dbuff: [app.H.alch, app.H.art], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.ax.name]   = { dbuff: [app.H.bs, app.H.aa], prof: [app.H.alch], items: [app.H.tan] };
     app.draft[app.H.bs.name]   = { dbuff: [app.H.bb], prof: [app.H.alch], items: [app.H.tan] };
     app.draft[app.H.bm.name]   = { dbuff: [app.H.bs], prof: [app.H.bs], items: [app.H.tan] };
     app.draft[app.H.br.name]   = { dbuff: [app.H.bs], prof: [app.H.bm], items: [app.H.tan] };
@@ -118,6 +120,7 @@ Dotes.app = (function() {
             app.H.alch,
             app.H.am,
             app.H.aa,
+            app.H.ax,
             app.H.bs,
             app.H.bm,
             app.H.br,
