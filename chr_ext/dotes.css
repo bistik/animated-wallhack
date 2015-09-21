@@ -31,7 +31,8 @@ margin-bottom: 10px;
 z-index: 6;
 background-color: #cfc;
 }
-.art, .aa,  .alch, .am, .ab {
+.art, .aa,  .alch, .am, .ab,
+.bs, .bm, .br, .bw, .bb, .bh, .ba, .bt {
 display: inline-block;
 width: 59px;
 height: 33px;
@@ -52,4 +53,28 @@ background-position: -177px 0px;
 }
 .ab {
 background-position: -236px 0px;
+}
+.bs {
+background-position: -295px 0px;
+}
+.bm {
+background-position: -354px 0px;
+}
+.br {
+background-position: -413px 0px;
+}
+.bw {
+background-position: -472px 0px;
+}
+.bb {
+background-position: -531 0px;
+}
+.bh {
+background-position: 0px -33px;
+}
+.ba {
+background-position: 0px -66px;
+}
+.bt {
+background-position: 0px -99px;
 }

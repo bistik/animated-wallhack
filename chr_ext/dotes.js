@@ -10,7 +10,15 @@ Dotes.app = (function() {
         art:  { name: 'art',  text: 'Aba' },
         alch: { name: 'alch', text: 'Alch' },
         aa:   { name: 'aa',   text: 'Aa' },
-        am:   { name: 'am',   text: 'Am' }
+        am:   { name: 'am',   text: 'Am' },
+        bs:   { name: 'bs',   text: 'Bl' },
+        bm:   { name: 'bm',   text: 'Be' },
+        br:   { name: 'br',   text: 'Br' },
+        bw:   { name: 'bw',   text: 'Bw' },
+        bb:   { name: 'bb',   text: 'Bb' },
+        bh:   { name: 'bh',   text: 'Bo' },
+        ba:   { name: 'ba',   text: 'Ba' },
+        bt:   { name: 'bt',   text: 'Ba' },
     };
 
     app.I = {
@@ -21,8 +29,16 @@ Dotes.app = (function() {
     app.draft = {};
     app.draft[app.H.art.name]  = { dbuff: [app.H.alch], prof: [app.H.alch], items: [app.H.tan] };
     app.draft[app.H.alch.name] = { dbuff: [app.H.art, app.H.aa],  prof: [app.H.art],  items: [app.H.tan] };
-    app.draft[app.H.aa.name]   = { dbuff: [app.H.art], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.aa.name]   = { dbuff: [app.H.bh], prof: [app.H.alch], items: [app.H.tan] };
     app.draft[app.H.am.name]   = { dbuff: [app.H.alch, app.H.art], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.bs.name]   = { dbuff: [app.H.bb], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.bm.name]   = { dbuff: [app.H.bs], prof: [app.H.bs], items: [app.H.tan] };
+    app.draft[app.H.br.name]   = { dbuff: [app.H.bs], prof: [app.H.bm], items: [app.H.tan] };
+    app.draft[app.H.bw.name]   = { dbuff: [app.H.am], prof: [app.H.bm], items: [app.H.tan] };
+    app.draft[app.H.bb.name]   = { dbuff: [app.H.aa], prof: [app.H.br], items: [app.H.tan] };
+    app.draft[app.H.bh.name]   = { dbuff: [app.H.bs], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.ba.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.bt.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.tan] };
 
     app.debug = function(message) {
         if (DEBUG) console.log(message);
@@ -101,7 +117,15 @@ Dotes.app = (function() {
             app.H.art,
             app.H.alch,
             app.H.am,
-            app.H.aa
+            app.H.aa,
+            app.H.bs,
+            app.H.bm,
+            app.H.br,
+            app.H.bb,
+            app.H.bw,
+            app.H.bh,
+            app.H.ba,
+            app.H.bt
         ];
         /* rowParent --> <div class="row">
                             <div class="wrap_row">
