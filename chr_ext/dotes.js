@@ -20,6 +20,7 @@ Dotes.app = (function() {
         bh:   { name: 'bh',   text: 'Bo' },
         ba:   { name: 'ba',   text: 'Ba' },
         bt:   { name: 'bt',   text: 'Ba' },
+        cl:   { name: 'cl',   text: 'Cl' },
     };
 
     app.I = {
@@ -41,6 +42,7 @@ Dotes.app = (function() {
     app.draft[app.H.bh.name]   = { dbuff: [app.H.bs], prof: [app.H.alch], items: [app.H.tan] };
     app.draft[app.H.ba.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.tan] };
     app.draft[app.H.bt.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.cl.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.tan] };
 
     app.debug = function(message) {
         if (DEBUG) console.log(message);
@@ -128,7 +130,8 @@ Dotes.app = (function() {
             app.H.bw,
             app.H.bh,
             app.H.ba,
-            app.H.bt
+            app.H.bt,
+            app.H.cl
         ];
         /* rowParent --> <div class="row">
                             <div class="wrap_row">
