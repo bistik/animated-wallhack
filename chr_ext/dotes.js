@@ -1,4 +1,4 @@
-// setting up namespace for 
+// setting up namespace for
 var Dotes = Dotes || {};
 
 Dotes.app = (function() {
@@ -27,6 +27,8 @@ Dotes.app = (function() {
         tan: { name: 'tan', text: 'Tan' },
         cla: { name: 'cla', text: 'Cla' },
     };
+
+    app.picks = [];
 
     app.draft = {};
     app.draft[app.H.art.name]  = { dbuff: [app.H.alch], prof: [app.H.alch], items: [app.H.tan] };
@@ -144,7 +146,12 @@ Dotes.app = (function() {
             a.className = name.name;
             a.appendChild(text);
             a.setAttribute('href', '#');
-            a.addEventListener('click', function() { 
+            a.addEventListener('click', function() {
+                //save the pick
+                app.picks[pickerNode.index - 1] = name
+                app.debug('picker index (' + pickerNode.index + ') ' + app.picks[pickerNode.index -1].name)
+
+                // reset the pickerNode and add text of the 'pick'
                 pickerNode.className = "slot " + this.className;
                 pickerNode.removeChild(pickerNode.firstChild);
                 pickerNode.appendChild(text);
@@ -178,12 +185,19 @@ Dotes.app = (function() {
         }
     };
 
+    app.forceLoadCounter = function() {
+        var pickers = document.getElementsByClassName('picker');
+        for (var i=0, len = pickers.length; i<len; i++) {
+        }
+    };
+
     /* main */
     app.onDOMContentLoaded = function() {
         var pickers = document.getElementsByClassName('picker');
         var dialog  = document.getElementById('dialog');
 
         for (var i=0, len = pickers.length; i<len; i++) {
+            pickers[i].index = i + 1;
             pickers[i].addEventListener("click", function() {
                 app.removeDialogs();
                 app.showDialog(this);
@@ -192,7 +206,7 @@ Dotes.app = (function() {
     };
 
     document.addEventListener('DOMContentLoaded', app.onDOMContentLoaded, false);
-    
+
     return app;
 
 })();
