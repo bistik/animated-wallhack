@@ -33,25 +33,38 @@ background-color: #cfc;
 }
 .art, .aa,  .alch, .am, .ab, .ax,
 .bs, .bm, .br, .bw, .bb, .bh, .ba, .bt,
-.cl {
+.cl, .ck, .cw, .cz, .cm, .ch,
+.ds, .dz, .dp, .di, .dm, .dk, .dr {
 display: inline-block;
 width: 59px;
 height: 33px;
-background-image: url('mugshot_sprite.png');
+background-image: url('mugshot_sprite_2.png');
 background-repeat: no-repeat;
 }
 .art  { background-position:    0px    0px }
 .alch { background-position:  -59px    0px }
 .am   { background-position: -118px    0px }
 .aa   { background-position: -177px    0px }
-.ab   { background-position: -236px    0px }
-.ax   { background-position: -295px    0px }
-.bs   { background-position: -354px    0px }
-.bm   { background-position: -413px    0px }
-.br   { background-position: -472px    0px }
-.bw   { background-position: -531px    0px }
-.bb   { background-position:    0px  -33px }
-.bh   { background-position:    0px  -66px }
-.ba   { background-position:    0px  -99px }
-.bt   { background-position:    0px -132px }
-.cl   { background-position:    0px -165px }
+.ax   { background-position: -236px    0px }
+.bs   { background-position: -295px    0px }
+.bm   { background-position: -354px    0px }
+.br   { background-position: -413px    0px }
+.bw   { background-position: -472px    0px }
+.bb   { background-position: -531px    0px }
+.bh   { background-position:    0px  -33px }
+.ba   { background-position:  -59px  -33px }
+.bt   { background-position: -118px  -33px }
+.cw   { background-position: -177px  -33px }
+.ck   { background-position: -236px  -33px }
+.ch   { background-position: -295px  -33px }
+.cz   { background-position: -354px  -33px }
+.cl   { background-position: -413px  -33px }
+.cm   { background-position: -472px  -33px }
+.dm   { background-position: -531px  -33px }
+.ds   { background-position:    0px  -66px }
+.dz   { background-position:  -59px  -66px }
+.dp   { background-position: -118px  -66px }
+.di   { background-position: -177px  -66px }
+.dm   { background-position: -236px  -66px }
+.dk   { background-position: -295px  -66px }
+.dr   { background-position: -354px  -66px }

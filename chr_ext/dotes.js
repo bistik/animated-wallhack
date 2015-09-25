@@ -8,43 +8,53 @@ Dotes.app = (function() {
 
     app.H = {
         art:  { name: 'art',  text: 'Aba' },
-        alch: { name: 'alch', text: 'Alch' },
-        aa:   { name: 'aa',   text: 'Aa' },
-        am:   { name: 'am',   text: 'Am' },
-        ax:   { name: 'ax',   text: 'Ax' },
-        bs:   { name: 'bs',   text: 'Bl' },
-        bm:   { name: 'bm',   text: 'Be' },
-        br:   { name: 'br',   text: 'Br' },
-        bw:   { name: 'bw',   text: 'Bw' },
-        bb:   { name: 'bb',   text: 'Bb' },
-        bh:   { name: 'bh',   text: 'Bo' },
-        ba:   { name: 'ba',   text: 'Ba' },
-        bt:   { name: 'bt',   text: 'Ba' },
-        cl:   { name: 'cl',   text: 'Cl' },
+        alch: { name: 'alch', text: 'Alc' },
+        aa:   { name: 'aa',   text: 'Anc' },
+        am:   { name: 'am',   text: 'Ant' },
+        ax:   { name: 'ax',   text: 'Axe' },
+        bs:   { name: 'bs',   text: 'Blo' },
+        bm:   { name: 'bm',   text: 'Bea' },
+        br:   { name: 'br',   text: 'Bro' },
+        bw:   { name: 'bw',   text: 'Bre' },
+        bb:   { name: 'bb',   text: 'Bri' },
+        bh:   { name: 'bh',   text: 'Bou' },
+        ba:   { name: 'ba',   text: 'Ban' },
+        bt:   { name: 'bt',   text: 'Bat' },
+        cw:   { name: 'cw',   text: 'Cen' },
+        ck:   { name: 'ck',   text: 'Cha' },
+        ch:   { name: 'ch',   text: 'Che' },
+        cz:   { name: 'cz',   text: 'Cli' },
+        cl:   { name: 'cl',   text: 'Clo' },
+        cm:   { name: 'cm',   text: 'Cry' },
     };
 
     app.I = {
-        tan: { name: 'tan', text: 'Tan' },
-        cla: { name: 'cla', text: 'Cla' },
+        ta: { name: 'ta', text: 'Ta' },
+        cl: { name: 'cl', text: 'Cl' },
     };
 
     app.picks = [];
 
     app.draft = {};
-    app.draft[app.H.art.name]  = { dbuff: [app.H.alch], prof: [app.H.alch], items: [app.H.tan] };
-    app.draft[app.H.alch.name] = { dbuff: [app.H.art, app.H.aa],  prof: [app.H.art],  items: [app.H.tan] };
-    app.draft[app.H.aa.name]   = { dbuff: [app.H.bh], prof: [app.H.alch], items: [app.H.tan] };
-    app.draft[app.H.am.name]   = { dbuff: [app.H.alch, app.H.art], prof: [app.H.alch], items: [app.H.tan] };
-    app.draft[app.H.ax.name]   = { dbuff: [app.H.bs, app.H.aa], prof: [app.H.alch], items: [app.H.tan] };
-    app.draft[app.H.bs.name]   = { dbuff: [app.H.bb], prof: [app.H.alch], items: [app.H.tan] };
-    app.draft[app.H.bm.name]   = { dbuff: [app.H.bs], prof: [app.H.bs], items: [app.H.tan] };
-    app.draft[app.H.br.name]   = { dbuff: [app.H.bs], prof: [app.H.bm], items: [app.H.tan] };
-    app.draft[app.H.bw.name]   = { dbuff: [app.H.am], prof: [app.H.bm], items: [app.H.tan] };
-    app.draft[app.H.bb.name]   = { dbuff: [app.H.aa], prof: [app.H.br], items: [app.H.tan] };
-    app.draft[app.H.bh.name]   = { dbuff: [app.H.bs], prof: [app.H.alch], items: [app.H.tan] };
-    app.draft[app.H.ba.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.tan] };
-    app.draft[app.H.bt.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.tan] };
-    app.draft[app.H.cl.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.tan] };
+    app.draft[app.H.art.name]  = { dbuff: [app.H.alch], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.alch.name] = { dbuff: [app.H.art, app.H.aa],  prof: [app.H.art],  items: [app.H.ta] };
+    app.draft[app.H.aa.name]   = { dbuff: [app.H.bh], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.am.name]   = { dbuff: [app.H.alch, app.H.art], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ax.name]   = { dbuff: [app.H.bs, app.H.aa], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.bs.name]   = { dbuff: [app.H.bb], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.bm.name]   = { dbuff: [app.H.bs], prof: [app.H.bs], items: [app.H.ta] };
+    app.draft[app.H.br.name]   = { dbuff: [app.H.bs], prof: [app.H.bm], items: [app.H.ta] };
+    app.draft[app.H.bw.name]   = { dbuff: [app.H.am], prof: [app.H.bm], items: [app.H.ta] };
+    app.draft[app.H.bb.name]   = { dbuff: [app.H.aa], prof: [app.H.br], items: [app.H.ta] };
+    app.draft[app.H.bh.name]   = { dbuff: [app.H.bs], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ba.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.bt.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.cw.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ck.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ch.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.cz.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.cl.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.cm.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
 
     app.debug = function(message) {
         if (DEBUG) console.log(message);
@@ -133,7 +143,12 @@ Dotes.app = (function() {
             app.H.bh,
             app.H.ba,
             app.H.bt,
-            app.H.cl
+            app.H.cw,
+            app.H.ck,
+            app.H.ch,
+            app.H.cz,
+            app.H.cl,
+            app.H.cm
         ];
         /* rowParent --> <div class="row">
                             <div class="wrap_row">
