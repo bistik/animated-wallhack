@@ -168,3 +168,6 @@ https://www.reddit.com/r/DotA2/comments/30fdfq/what_are_some_settings_pro_player
 
 doto pro tops#3
 https://docs.google.com/document/d/19A5QcocHbVRe_knaUUoncMQD-wfsE3uXqqtiS9iyUoM/edit?pli=1
+
+doto pro tops#4
+https://github.com/earlonrails/cfg
