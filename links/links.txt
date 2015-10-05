@@ -170,3 +170,6 @@ https://docs.google.com/document/d/19A5QcocHbVRe_knaUUoncMQD-wfsE3uXqqtiS9iyUoM/
 
 doto pro tops#4
 https://github.com/earlonrails/cfg
+
+offline doto
+http://www.mabzicle.com/2014/12/how-to-play-dota2-in-offline-mode-or-no-internet.html
