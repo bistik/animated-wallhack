@@ -4,17 +4,7 @@ use warnings;
 
 use LWP::Simple;
 use HTML::TableExtract;
-use Data::Dumper;
 
-my $te = HTML::TableExtract->new( 
-            headers => ["Item",
-                        "", # name, added cause of colspan=2 
-                        "Advantage", 
-                        "Win Rate", 
-                        "Matches"],
-            strip_html_on_match => 1,
-            debug => 1
-        );
 
 my $cache_file   = get_cache_filename("heroes");
 my $heroes_cache = read_from_cache($cache_file);
@@ -34,20 +24,39 @@ if ($hero_list_page =~ /(<div class="hero-grid">.*?<p class="footnote">.*?<\/div
 
 my (@heroes) = $hero_list_page =~ /<div class="name">(.*?)<\/div>/g;
 
-foreach my $h (@heroes[8..9]) {
+foreach my $h (@heroes[8..12]) {
     $h =~ s/\s/-/g;
     $h = lc $h;
-    my $hero_page = get("http://www.dotabuff.com/heroes/$h");
+    my $cache_file = get_cache_filename($h);
+    my $hero_cache = read_from_cache($cache_file);
+    my $hero_page;
+
+    if ($hero_cache) {
+        $hero_page = $hero_cache;
+    } else {
+        $hero_page = get("http://www.dotabuff.com/heroes/$h");
+        write_to_cache($hero_page, $cache_file);
+    }
+    my $te = HTML::TableExtract->new( 
+        headers => ["Item",
+                    "", # name, added cause of colspan=2 
+                    "Advantage", 
+                    "Win Rate", 
+                    "Matches"],
+        strip_html_on_match => 1
+    );
     $te->parse($hero_page);
+    print "\n$h  Best Versus:\n";
+    printf "%-10.10s\t%.10s\t%.10s\t%.10s\n", "Hero", "Advantage", "Win Rate", "Matches";
     foreach my $ts ($te->tables) {
         foreach my $row ($ts->rows) {
             foreach my $cell (@$row[1..4]) {
-                print Dumper($cell);
+                printf "%-10.10s\t", $cell;
             }
+            print "\n";
         }
     }
 }
-print "@heroes";
 
 my @draft = @ARGV;
 
@@ -83,7 +92,8 @@ sub write_to_cache {
 
     unless (-e $filename) {
         open my $fh, ">", $filename or die "cannot write to cache: $!";
-        print $fh, $page;
+        print $fh $page;
+        close $fh;
     }
 
 }
