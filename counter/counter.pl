@@ -72,6 +72,21 @@ sub counter_counter {
     }
 }
 
+# TODO implement
+sub get_items {
+    my $cache_file   = get_cache_filename("items");
+    my $heroes_cache = read_from_cache($cache_file);
+
+    my $te = HTML::TableExtract->new( 
+        headers => ["Item",
+            "", # name, added cause of colspan=2 
+            "Matches", 
+            "Wins", 
+            "Win Rate"],
+        strip_html_on_match => 1
+    );
+}
+
 sub get_picks {
     my @indexes;
     my @aliases = (
