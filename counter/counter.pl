@@ -9,7 +9,94 @@ my $DEBUG = 1;
 
 counter_counter();
 
+# MAIN
 sub counter_counter {
+    my @indexes = get_picks(@ARGV);
+    my @heroes  = get_heroes();
+
+    foreach my $hero (@heroes[@indexes]) {
+        $hero =~ s/\s/-/g;
+        $hero =~ s/'//g; # nature's prophet
+        $hero = lc $hero;
+        print "\n" . "*" x 60 . "\n";
+        get_best_worst($hero);
+        print "\n";
+        get_items($hero);
+    }
+}
+
+sub get_items {
+    my $hero = shift;    
+    my $cache_file  = get_cache_filename("items$hero");
+    my $items_cache = read_from_cache($cache_file);
+    my $items_page;
+
+    if ($items_cache) {
+        $items_page = $items_cache;
+    } else {
+        $items_page = get("http://www.dotabuff.com/heroes/$hero");
+        write_to_cache($items_page, $cache_file);
+    }
+    my $te = HTML::TableExtract->new( 
+        headers => ["Item",
+            "", # name, added cause of colspan=2 
+            "Matches", 
+            "Wins", 
+            "Win Rate"],
+        strip_html_on_match => 1
+    );
+    $te->parse($items_page);
+
+    foreach my $ts ($te->tables) {
+        printf "%-10.10s\t%-10.10s\t%-10.10s\t%-10.10s\n", "-ITEM-", "-MATCHES-", "-WINS-", "-WIN RATE-";
+        foreach my $row ($ts->rows) {
+            foreach my $cell (@$row[1..4]) {
+                printf "%-10.10s\t", $cell;
+            }
+            print "\n";
+        }
+    }
+}
+
+sub get_best_worst {
+    my $hero = shift;
+    my @table_headings = ("Best Versus", "Worst Versus");
+    my $cache_file = get_cache_filename($hero);
+    my $hero_cache = read_from_cache($cache_file);
+    my $hero_page;
+
+    if ($hero_cache) {
+        $hero_page = $hero_cache;
+    } else {
+        $hero_page = get("http://www.dotabuff.com/heroes/$hero");
+        write_to_cache($hero_page, $cache_file);
+    }
+    my $te = HTML::TableExtract->new( 
+        headers => ["Item",
+                "", # name, added cause of colspan=2 
+                "Advantage", 
+                "Win Rate", 
+                "Matches"],
+        strip_html_on_match => 1
+    );
+    $te->parse($hero_page);
+    
+    print "$hero\n";
+
+    foreach my $ts ($te->tables) {
+        print "\n" . $table_headings[0] . "\n";
+        shift @table_headings if @table_headings;
+        printf "%-10.10s\t%-10.10s\t%-10.10s\t%-10.10s\n", "Hero", "Advantage", "Win Rate", "Matches";
+        foreach my $row ($ts->rows) {
+            foreach my $cell (@$row[1..4]) {
+                printf "%-10.10s\t", $cell;
+            }
+            print "\n";
+        }
+    }
+}
+
+sub get_heroes {
     my $cache_file   = get_cache_filename("heroes");
     my $heroes_cache = read_from_cache($cache_file);
 
@@ -28,63 +115,7 @@ sub counter_counter {
 
     my (@heroes) = $hero_list_page =~ /<div class="name">(.*?)<\/div>/g;
 
-    my @indexes = get_picks(@ARGV);
-
-    foreach my $h (@heroes[@indexes]) {
-        $h =~ s/\s/-/g;
-        $h = lc $h;
-        my @table_headings = ("Best Versus", "Worst Versus");
-        my $cache_file = get_cache_filename($h);
-        my $hero_cache = read_from_cache($cache_file);
-        my $hero_page;
-
-        if ($hero_cache) {
-            $hero_page = $hero_cache;
-        } else {
-            $hero_page = get("http://www.dotabuff.com/heroes/$h");
-            write_to_cache($hero_page, $cache_file);
-        }
-        my $te = HTML::TableExtract->new( 
-            headers => ["Item",
-                    "", # name, added cause of colspan=2 
-                    "Advantage", 
-                    "Win Rate", 
-                    "Matches"],
-            strip_html_on_match => 1
-        );
-        $te->parse($hero_page);
-    
-        print "\n-----------------------------------------------\n";
-        print "$h\n";
-
-        foreach my $ts ($te->tables) {
-            print "\n" . $table_headings[0] . "\n";
-
-            shift @table_headings if @table_headings;
-            printf "%-10.10s\t%.10s\t%.10s\t%.10s\n", "Hero", "Advantage", "Win Rate", "Matches";
-            foreach my $row ($ts->rows) {
-                foreach my $cell (@$row[1..4]) {
-                    printf "%-10.10s\t", $cell;
-                }
-                print "\n";
-            }
-        }
-    }
-}
-
-# TODO implement
-sub get_items {
-    my $cache_file   = get_cache_filename("items");
-    my $heroes_cache = read_from_cache($cache_file);
-
-    my $te = HTML::TableExtract->new( 
-        headers => ["Item",
-            "", # name, added cause of colspan=2 
-            "Matches", 
-            "Wins", 
-            "Win Rate"],
-        strip_html_on_match => 1
-    );
+    return @heroes;
 }
 
 sub get_picks {
