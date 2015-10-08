@@ -3,6 +3,7 @@ use strict;
 use warnings;
 
 use LWP::Simple;
+use BuffPage;
 use HTML::TableExtract;
 
 my $DEBUG = 1;
@@ -27,16 +28,7 @@ sub counter_counter {
 
 sub get_items {
     my $hero = shift;    
-    my $cache_file  = get_cache_filename("items$hero");
-    my $items_cache = read_from_cache($cache_file);
-    my $items_page;
-
-    if ($items_cache) {
-        $items_page = $items_cache;
-    } else {
-        $items_page = get("http://www.dotabuff.com/heroes/$hero");
-        write_to_cache($items_page, $cache_file);
-    }
+    my $bp = BuffPage->new( type => 'items', hero => $hero );
     my $te = HTML::TableExtract->new( 
         headers => ["Item",
             "", # name, added cause of colspan=2 
@@ -45,7 +37,8 @@ sub get_items {
             "Win Rate"],
         strip_html_on_match => 1
     );
-    $te->parse($items_page);
+
+    $te->parse($bp->get_page());
 
     foreach my $ts ($te->tables) {
         printf "%-10.10s\t%-10.10s\t%-10.10s\t%-10.10s\n", "-ITEM-", "-MATCHES-", "-WINS-", "-WIN RATE-";
@@ -61,16 +54,7 @@ sub get_items {
 sub get_best_worst {
     my $hero = shift;
     my @table_headings = ("Best Versus", "Worst Versus");
-    my $cache_file = get_cache_filename($hero);
-    my $hero_cache = read_from_cache($cache_file);
-    my $hero_page;
-
-    if ($hero_cache) {
-        $hero_page = $hero_cache;
-    } else {
-        $hero_page = get("http://www.dotabuff.com/heroes/$hero");
-        write_to_cache($hero_page, $cache_file);
-    }
+    my $bp = BuffPage->new( type => 'hero', hero => $hero );
     my $te = HTML::TableExtract->new( 
         headers => ["Item",
                 "", # name, added cause of colspan=2 
@@ -79,7 +63,8 @@ sub get_best_worst {
                 "Matches"],
         strip_html_on_match => 1
     );
-    $te->parse($hero_page);
+
+    $te->parse($bp->get_page());
     
     print "$hero\n";
 
@@ -97,17 +82,9 @@ sub get_best_worst {
 }
 
 sub get_heroes {
-    my $cache_file   = get_cache_filename("heroes");
-    my $heroes_cache = read_from_cache($cache_file);
+    my $bp = BuffPage->new( type => 'list' );
 
-    my $hero_list_page;
-
-    if ($heroes_cache) {
-        $hero_list_page = $heroes_cache;
-    } else {
-        $hero_list_page = get("http://www.dotabuff.com/heroes");
-        write_to_cache($hero_list_page, $cache_file);
-    }
+    my $hero_list_page = $bp->get_page();
 
     if ($hero_list_page =~ /(<div class="hero-grid">.*?<p class="footnote">.*?<\/div>)/s ) {
         $hero_list_page = $1;
@@ -241,40 +218,4 @@ sub get_picks {
     print "INDEX: " . join '---', @aliases[@indexes] if $DEBUG;
 
     return @indexes;
-}
-
-sub get_cache_filename {
-    my $cache_type = shift;
-
-    my ($mday, $mon, $year) = (localtime())[3..5];
-    $mon++;
-    $mon  = "0$mon"  if $mon < 10;
-    $mday = "0$mday" if $mday < 10;
-    $year += 1900;
-
-    return $cache_type . $year . $mon . $mday;
-}
-
-sub write_to_cache {
-    my ($page, $filename) = @_;
-
-    unless (-e $filename) {
-        open my $fh, ">", $filename or die "cannot write to cache: $!";
-        print $fh $page;
-        close $fh;
-    }
-
-}
-
-sub read_from_cache {
-    my $filename = shift;
-
-    return 0 unless (-e $filename);
-
-    open my $fh, '<', $filename or die "cannot read from cache: $!";
-    $/ = undef; # slurp
-    my $cache = <$fh>;
-    close $fh;
-
-    return $cache;
 }
