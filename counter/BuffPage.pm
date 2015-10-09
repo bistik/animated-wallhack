@@ -4,7 +4,6 @@ use strict;
 use warnings;
 
 use LWP::Simple;
-use Data::Dumper;
 
 sub new {
     my ($class, %attr) = @_;
@@ -66,7 +65,7 @@ sub _get_cache_filename {
     my $self = shift;
     my $prefix;
 
-    my ($mday, $mon, $year) = (localtime())[3..5];
+    my ($hour, $mday, $mon, $year) = (localtime())[3..5];
     $mon++;
     $mon  = "0$mon"  if $mon < 10;
     $mday = "0$mday" if $mday < 10;
@@ -82,7 +81,7 @@ sub _get_cache_filename {
         $prefix = 'heroes';
     }
 
-    return $prefix . $year . $mon . $mday;
+    return $prefix . $year . $mon . $mday . $hour;
 }
 
 1;
