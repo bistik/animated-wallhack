@@ -1,0 +1,14 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use autodie;
+
+use File::Spec;
+
+my $conf_file = File::Spec->catfile($ENV{'HOME'}, '.nbkconf');
+
+open my $fh, '<', $conf_file;
+
+
