@@ -176,3 +176,6 @@ http://www.mabzicle.com/2014/12/how-to-play-dota2-in-offline-mode-or-no-internet
 
 command-line password manager
 http://www.passwordstore.org/
+
+chrome devtools
+http://mo.github.io/2015/10/19/chrome-devtools.html
