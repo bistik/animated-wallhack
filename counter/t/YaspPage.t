@@ -30,4 +30,4 @@ $mday = "0$mday" if $mday < 10;
 $year += 1900;
 is $yp->_get_cache_filename(), $yp->{id} . "_$year$mon$mday$hour", 'filename matches <ID_DATE> format';
 
-$yp->get_page;
+print "DUMP:" . $yp->get_page;
