@@ -179,3 +179,6 @@ http://www.passwordstore.org/
 
 chrome devtools
 http://mo.github.io/2015/10/19/chrome-devtools.html
+
+cpan spotters guide
+http://neilb.org/2015/10/18/spotters-guide.html
