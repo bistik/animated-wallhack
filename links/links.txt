@@ -182,3 +182,6 @@ http://mo.github.io/2015/10/19/chrome-devtools.html
 
 cpan spotters guide
 http://neilb.org/2015/10/18/spotters-guide.html
+
+perl scraper cpan module
+https://metacpan.org/release/Web-Scraper
