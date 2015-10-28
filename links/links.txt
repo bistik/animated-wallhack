@@ -188,3 +188,6 @@ https://metacpan.org/release/Web-Scraper
 
 20 Cognitive biases
 http://images.mentalfloss.com/sites/default/files/styles/insert_main_wide_image/public/cognitive_biases.png
+
+postgres
+https://www.compose.io/articles/what-postgresql-has-over-other-open-source-sql-databases/
