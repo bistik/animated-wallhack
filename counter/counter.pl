@@ -11,6 +11,8 @@ use HTML::TableExtract;
 
 my $DEBUG = 1;
 
+binmode STDOUT, ':utf8';
+
 counter_counter();
 
 # MAIN
