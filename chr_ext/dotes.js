@@ -26,6 +26,27 @@ Dotes.app = (function() {
         cz:   { name: 'cz',   text: 'Cli' },
         cl:   { name: 'cl',   text: 'Clo' },
         cm:   { name: 'cm',   text: 'Cry' },
+        ds:   { name: 'ds',   text: 'Dar' },
+        dz:   { name: 'dz',   text: 'Daz' },
+        dp:   { name: 'dp',   text: 'Dea' },
+        di:   { name: 'di',   text: 'Dis' },
+        dm:   { name: 'dm',   text: 'Doo' },
+        dk:   { name: 'dk',   text: 'Dra' },
+        dr:   { name: 'dr',   text: 'Dro' },
+        ea:   { name: 'ea',   text: 'ES' },
+        es:   { name: 'es',   text: 'ES' },
+        et:   { name: 'et',   text: 'ET' },
+        em:   { name: 'em',   text: 'Emb' },
+        ec:   { name: 'ec',   text: 'Enc' },
+        eg:   { name: 'eg',   text: 'Eni' },
+        fv:   { name: 'fv',   text: 'Void' },
+        np:   { name: 'np',   text: 'Fur' },
+        gyro: { name: 'gyro', text: 'Gyro' },
+        husk: { name: 'husk', text: 'Husk' },
+        invo: { name: 'invo', text: 'Invo' },
+        jak:  { name: 'jak',  text: 'Jak' },
+        jugg: { name: 'jugg', text: 'Jug' },
+        kotl: { name: 'kotl', text: 'Kee' },
     };
 
     app.I = {
@@ -55,6 +76,27 @@ Dotes.app = (function() {
     app.draft[app.H.cz.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.cl.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.cm.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ds.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.dz.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.dp.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.di.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.dm.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.dk.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.dr.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ea.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.es.name]   = { dbuff: [app.H.cm], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.et.name]   = { dbuff: [app.H.dr], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.em.name]   = { dbuff: [app.H.ds], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ec.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.eg.name]   = { dbuff: [app.H.ec], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.fv.name]   = { dbuff: [app.H.ec], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.np.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.gyro.name] = { dbuff: [app.H.jugg], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.husk.name] = { dbuff: [app.H.ec], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.invo.name] = { dbuff: [app.H.ec], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.jak.name]  = { dbuff: [app.H.husk], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.jugg.name] = { dbuff: [app.H.ec], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.kotl.name] = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
 
     app.debug = function(message) {
         if (DEBUG) console.log(message);
@@ -148,7 +190,28 @@ Dotes.app = (function() {
             app.H.ch,
             app.H.cz,
             app.H.cl,
-            app.H.cm
+            app.H.cm,
+            app.H.ds,
+            app.H.dz,
+            app.H.dp,
+            app.H.di,
+            app.H.dm,
+            app.H.dk,
+            app.H.dr,
+            app.H.ea,
+            app.H.es,
+            app.H.et,
+            app.H.em,
+            app.H.ec,
+            app.H.eg,
+            app.H.fv,
+            app.H.np,
+            app.H.gyro,
+            app.H.husk,
+            app.H.invo,
+            app.H.jak,
+            app.H.jugg,
+            app.H.kotl,
         ];
         /* rowParent --> <div class="row">
                             <div class="wrap_row">

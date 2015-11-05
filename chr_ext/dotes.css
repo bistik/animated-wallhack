@@ -34,7 +34,11 @@ background-color: #cfc;
 .art, .aa,  .alch, .am, .ab, .ax,
 .bs, .bm, .br, .bw, .bb, .bh, .ba, .bt,
 .cl, .ck, .cw, .cz, .cm, .ch,
-.ds, .dz, .dp, .di, .dm, .dk, .dr {
+.ds, .dz, .dp, .di, .dm, .dk, .dr,
+.ea, .es, .et, .em, .ec, .eg,
+.fv, .np, .gyro, .husk, .invo,
+.jak, .jugg, .kotl
+ {
 display: inline-block;
 width: 59px;
 height: 33px;
@@ -60,11 +64,24 @@ background-repeat: no-repeat;
 .cz   { background-position: -354px  -33px }
 .cl   { background-position: -413px  -33px }
 .cm   { background-position: -472px  -33px }
-.dm   { background-position: -531px  -33px }
-.ds   { background-position:    0px  -66px }
-.dz   { background-position:  -59px  -66px }
-.dp   { background-position: -118px  -66px }
-.di   { background-position: -177px  -66px }
-.dm   { background-position: -236px  -66px }
-.dk   { background-position: -295px  -66px }
-.dr   { background-position: -354px  -66px }
+.ds   { background-position: -531px  -33px }
+.dz   { background-position:    0px  -66px }
+.dp   { background-position:  -59px  -66px }
+.di   { background-position: -118px  -66px }
+.dm   { background-position: -177px  -66px }
+.dk   { background-position: -236px  -66px }
+.dr   { background-position: -295px  -66px }
+.ea   { background-position: -354px  -66px }
+.es   { background-position: -413px  -66px }
+.et   { background-position: -472px  -66px }
+.em   { background-position: -531px  -66px }
+.ec   { background-position:    0px  -99px }
+.eg   { background-position:  -59px  -99px }
+.fv   { background-position: -118px  -99px }
+.np   { background-position: -177px  -99px }
+.gyro { background-position: -236px  -99px }
+.husk { background-position: -295px  -99px }
+.invo { background-position: -354px  -99px }
+.jak  { background-position: -413px  -99px }
+.jugg { background-position: -472px  -99px }
+.kotl { background-position: -531px  -99px }
