@@ -37,7 +37,8 @@ background-color: #cfc;
 .ds, .dz, .dp, .di, .dm, .dk, .dr,
 .ea, .es, .et, .em, .ec, .eg,
 .fv, .np, .gyro, .husk, .invo,
-.jak, .jugg, .kotl
+.jak, .jugg, .kotl, .ku,
+.lc, .lesh, .lich, .naix, .lina, .lion, .ld, .luna, .ly
  {
 display: inline-block;
 width: 59px;
@@ -85,3 +86,13 @@ background-repeat: no-repeat;
 .jak  { background-position: -413px  -99px }
 .jugg { background-position: -472px  -99px }
 .kotl { background-position: -531px  -99px }
+.ku   { background-position:    0px  -132px }
+.lc   { background-position:  -59px  -132px }
+.lesh { background-position: -118px  -132px }
+.lich { background-position: -177px  -132px }
+.naix { background-position: -236px  -132px }
+.lina { background-position: -295px  -132px }
+.lion { background-position: -354px  -132px }
+.ld   { background-position: -413px  -132px }
+.luna { background-position: -472px  -132px }
+.ly   { background-position: -531px  -132px }

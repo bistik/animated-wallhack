@@ -47,6 +47,16 @@ Dotes.app = (function() {
         jak:  { name: 'jak',  text: 'Jak' },
         jugg: { name: 'jugg', text: 'Jug' },
         kotl: { name: 'kotl', text: 'Kee' },
+        ku:   { name: 'ku',   text: 'Kun' },
+        lc:   { name: 'lc',   text: 'Legion' },
+        lesh: { name: 'lesh', text: 'Leshrac' },
+        lich: { name: 'lich', text: 'Lich' },
+        naix: { name: 'naix', text: 'Naix' },
+        lina: { name: 'lina', text: 'Lina' },
+        lion: { name: 'lion', text: 'Lion' },
+        ld:   { name: 'ld',   text: 'Lone D' },
+        luna: { name: 'luna', text: 'Luna' },
+        ly:   { name: 'ly',   text: 'Lycan' },
     };
 
     app.I = {
@@ -97,6 +107,15 @@ Dotes.app = (function() {
     app.draft[app.H.jak.name]  = { dbuff: [app.H.husk], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.jugg.name] = { dbuff: [app.H.ec], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.kotl.name] = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ku.name]   = { dbuff: [app.H.luna], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.lc.name]   = { dbuff: [app.H.jugg], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.lesh.name] = { dbuff: [app.H.husk], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.lich.name] = { dbuff: [app.H.husk], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.lina.name] = { dbuff: [app.H.husk], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.lion.name] = { dbuff: [app.H.husk], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.luna.name] = { dbuff: [app.H.husk], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ld.name]   = { dbuff: [app.H.ly], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ly.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
 
     app.debug = function(message) {
         if (DEBUG) console.log(message);
@@ -212,6 +231,15 @@ Dotes.app = (function() {
             app.H.jak,
             app.H.jugg,
             app.H.kotl,
+            app.H.ku,
+            app.H.lc,
+            app.H.lesh,
+            app.H.lich,
+            app.H.lina,
+            app.H.lion,
+            app.H.ld,
+            app.H.luna,
+            app.H.ly,
         ];
         /* rowParent --> <div class="row">
                             <div class="wrap_row">
