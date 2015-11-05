@@ -179,3 +179,18 @@ http://www.passwordstore.org/
 
 chrome devtools
 http://mo.github.io/2015/10/19/chrome-devtools.html
+
+cpan spotters guide
+http://neilb.org/2015/10/18/spotters-guide.html
+
+perl scraper cpan module
+https://metacpan.org/release/Web-Scraper
+
+20 Cognitive biases
+http://images.mentalfloss.com/sites/default/files/styles/insert_main_wide_image/public/cognitive_biases.png
+
+postgres
+https://www.compose.io/articles/what-postgresql-has-over-other-open-source-sql-databases/
+
+construct 2 on steam
+http://store.steampowered.com/app/227240

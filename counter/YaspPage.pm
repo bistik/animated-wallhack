@@ -3,7 +3,7 @@ package YaspPage;
 use strict;
 use warnings;
 
-use LWP::Simple;
+use WWW::Mechanize;
 use Data::Dumper;
 
 sub new {
@@ -13,8 +13,10 @@ sub new {
 
 sub get_page {
     my $self = shift;
-    my $page = get($self->_url);
-    print Dumper($page);
+    my $mech = WWW::Mechanize->new();
+    $mech->agent_alias('Windows Mozilla');
+    my $page = $mech->get($self->_url);
+    $page->decoded_content;
 }
 
 sub _url {
