@@ -215,9 +215,9 @@ Dotes.app = (function() {
     app.draft[app.H.ta.name]   = { dbuff: [app.H.pl, app.H.ds], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.tb.name]   = { dbuff: [app.H.timb, app.H.sk, app.H.lesh], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.tide.name] = { dbuff: [app.H.dp, app.H.snip, app.H.dr], prof: [app.H.alch], items: [app.H.ta] };
-    app.draft[app.H.timb.name] = { dbuff: [app.H.pugna, app.H.ls, app.H.jugg], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.timb.name] = { dbuff: [app.H.pugna, app.H.naix, app.H.jugg], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.tink.name] = { dbuff: [app.H.naga, app.H.pudge, app.H.nyx], prof: [app.H.alch], items: [app.H.ta] };
-    app.draft[app.H.tiny.name] = { dbuff: [app.H.ls, app.H.bt, app.H.vis], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.tiny.name] = { dbuff: [app.H.naix, app.H.bt, app.H.vis], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.tree.name] = { dbuff: [app.H.pl, app.H.ds, app.H.ursa], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.troll.name]= { dbuff: [app.H.cm, app.H.wind, app.H.ax], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.tusk.name] = { dbuff: [app.H.ta, app.H.wisp, app.H.puck], prof: [app.H.alch], items: [app.H.ta] };
@@ -234,7 +234,7 @@ Dotes.app = (function() {
     app.draft[app.H.wisp.name] = { dbuff: [app.H.bm, app.H.np, app.H.lesh], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.wd.name]   = { dbuff: [app.H.br, app.H.np, app.H.slark], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.wk.name]   = { dbuff: [app.H.pl, app.H.am, app.H.invo], prof: [app.H.alch], items: [app.H.ta] };
-    app.draft[app.H.zeus.name] = { dbuff: [app.H.husk, app.H.ls, app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.zeus.name] = { dbuff: [app.H.husk, app.H.naix, app.H.am], prof: [app.H.alch], items: [app.H.ta] };
 
     app.debug = function(message) {
         if (DEBUG) console.log(message);
