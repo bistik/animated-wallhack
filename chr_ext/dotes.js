@@ -57,6 +57,11 @@ Dotes.app = (function() {
         ld:   { name: 'ld',   text: 'Lone D' },
         luna: { name: 'luna', text: 'Luna' },
         ly:   { name: 'ly',   text: 'Lycan' },
+        mag:  { name: 'mag',  text: 'Magnus' },
+        med:  { name: 'med',  text: 'Medusa' },
+        mp:   { name: 'mp',   text: 'Meepo' },
+        potm: { name: 'potm', text: 'Mirana' },
+        morp: { name: 'morp', text: 'Morph' },
     };
 
     app.I = {
@@ -116,6 +121,11 @@ Dotes.app = (function() {
     app.draft[app.H.luna.name] = { dbuff: [app.H.husk], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.ld.name]   = { dbuff: [app.H.ly], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.ly.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.mag.name]  = { dbuff: [app.H.alch], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.med.name]  = { dbuff: [app.H.am, app.H.br, app.H.kotl], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.mp.name]   = { dbuff: [app.H.em, app.H.es, app.H.lich], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.potm.name] = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.morp.name] = { dbuff: [app.H.bm, app.H.np], prof: [app.H.alch], items: [app.H.ta] };
 
     app.debug = function(message) {
         if (DEBUG) console.log(message);
@@ -240,6 +250,11 @@ Dotes.app = (function() {
             app.H.ld,
             app.H.luna,
             app.H.ly,
+            app.H.mag,
+            app.H.med,
+            app.H.mp,
+            app.H.potm,
+            app.H.morp,
         ];
         /* rowParent --> <div class="row">
                             <div class="wrap_row">

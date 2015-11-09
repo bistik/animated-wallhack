@@ -38,7 +38,8 @@ background-color: #cfc;
 .ea, .es, .et, .em, .ec, .eg,
 .fv, .np, .gyro, .husk, .invo,
 .jak, .jugg, .kotl, .ku,
-.lc, .lesh, .lich, .naix, .lina, .lion, .ld, .luna, .ly
+.lc, .lesh, .lich, .naix, .lina, .lion, .ld, .luna, .ly,
+.mag, .med, .mp, .potm, .morp
  {
 display: inline-block;
 width: 59px;
@@ -96,3 +97,8 @@ background-repeat: no-repeat;
 .ld   { background-position: -413px  -132px }
 .luna { background-position: -472px  -132px }
 .ly   { background-position: -531px  -132px }
+.mag  { background-position:    0px  -165px }
+.med  { background-position:  -59px  -165px }
+.mp   { background-position: -118px  -165px }
+.potm { background-position: -177px  -165px }
+.morp { background-position: -236px  -165px }
