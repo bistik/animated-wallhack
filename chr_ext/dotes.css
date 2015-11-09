@@ -39,7 +39,15 @@ background-color: #cfc;
 .fv, .np, .gyro, .husk, .invo,
 .jak, .jugg, .kotl, .ku,
 .lc, .lesh, .lich, .naix, .lina, .lion, .ld, .luna, .ly,
-.mag, .med, .mp, .potm, .morp
+.mag, .med, .mp, .potm, .morp,
+.naga, .necro, .sf, .ns, .nyx,
+.od, .ogre, .omni, .ora,
+.pa, .pl, .phx, .puck, .pudge, .pugna,
+.qop, .razor, .riki, .rub,
+.sk, .sd, .sham, .sil, .sky, .sl, .slark, .snip, .spec, .bara, .storm, .sven,
+.tech, .ta, .tb, .tide, .timb, .tink, .tiny, .tree, .troll, .tusk,
+.undy, .ursa, .veng, .veno, .viper, .vis,
+.war, .weave, .wind, .wint, .wisp, .wd, .wk, .zeus
  {
 display: inline-block;
 width: 59px;
@@ -102,3 +110,58 @@ background-repeat: no-repeat;
 .mp   { background-position: -118px  -165px }
 .potm { background-position: -177px  -165px }
 .morp { background-position: -236px  -165px }
+.naga { background-position: -295px  -165px }
+.necro{ background-position: -354px  -165px }
+.sf   { background-position: -413px  -165px }
+.ns   { background-position: -472px  -165px }
+.nyx  { background-position: -531px  -165px }
+.od   { background-position:    0px  -198px }
+.ogre { background-position:  -59px  -198px }
+.omni { background-position: -118px  -198px }
+.ora  { background-position: -177px  -198px }
+.pa   { background-position: -236px  -198px }
+.pl   { background-position: -295px  -198px }
+.phx  { background-position: -354px  -198px }
+.puck { background-position: -413px  -198px }
+.pudge{ background-position: -472px  -198px }
+.pugna{ background-position: -531px  -198px }
+.qop  { background-position:    0px  -231px }
+.razor{ background-position:  -59px  -231px }
+.riki { background-position: -118px  -231px }
+.rub  { background-position: -177px  -231px }
+.sk   { background-position: -236px  -231px }
+.sd   { background-position: -295px  -231px }
+.sham { background-position: -354px  -231px }
+.sil  { background-position: -413px  -231px }
+.sky  { background-position: -472px  -231px }
+.sl   { background-position: -531px  -231px }
+.slark{ background-position:    0px  -231px }
+.snip { background-position:  -59px  -231px }
+.spec { background-position: -118px  -231px }
+.bara { background-position: -177px  -231px }
+.storm{ background-position: -236px  -231px }
+.sven { background-position: -295px  -231px }
+.tech { background-position: -354px  -231px }
+.ta   { background-position: -413px  -231px }
+.tb   { background-position: -472px  -231px }
+.tide { background-position: -531px  -231px }
+.timb { background-position:    0px  -264px }
+.tink { background-position:  -59px  -264px }
+.tiny { background-position: -118px  -264px }
+.tree { background-position: -177px  -264px }
+.troll{ background-position: -236px  -264px }
+.tusk { background-position: -295px  -264px }
+.undy { background-position: -354px  -264px }
+.ursa { background-position: -413px  -264px }
+.veng { background-position: -472px  -264px }
+.veno { background-position: -531px  -264px }
+.viper{ background-position:    0px  -264px }
+.vis  { background-position:  -59px  -297px }
+.war  { background-position: -118px  -297px }
+.weave{ background-position: -177px  -297px }
+.wind { background-position: -236px  -297px }
+.wint { background-position: -295px  -297px }
+.wisp { background-position: -354px  -297px }
+.wd   { background-position: -413px  -297px }
+.wk   { background-position: -472px  -297px }
+.zeus { background-position: -531px  -297px }

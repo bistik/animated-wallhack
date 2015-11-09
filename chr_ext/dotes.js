@@ -62,6 +62,60 @@ Dotes.app = (function() {
         mp:   { name: 'mp',   text: 'Meepo' },
         potm: { name: 'potm', text: 'Mirana' },
         morp: { name: 'morp', text: 'Morph' },
+        naga: { name: 'naga', text: 'Naga' },
+        necro:{ name: 'necro',text: 'Necro' },
+        sf:   { name: 'sf',   text: 'Never' },
+        ns:   { name: 'ns',   text: 'Night' },
+        nyx:  { name: 'nyx',  text: 'Nyx' },
+        od:   { name: 'od',   text: 'Obsid' },
+        ogre: { name: 'ogre', text: 'Ogre' },
+        omni: { name: 'omni', text: 'Omni' },
+        ora:  { name: 'ora',  text: 'Ora' },
+        pa:   { name: 'pa',   text: 'PA' },
+        pl:   { name: 'pl',   text: 'PL' },
+        phx:  { name: 'phx',  text: 'Phx' },
+        puck: { name: 'puck', text: 'Puck' },
+        pudge:{ name: 'pudge',text: 'Pudge' },
+        pugna:{ name: 'pugna',text: 'Pugna' },
+        qop:  { name: 'qop',  text: 'Queen' },
+        razor:{ name: 'razor',text: 'Razor' },
+        riki: { name: 'riki', text: 'Riki' },
+        rub:  { name: 'rub',  text: 'Rubick' },
+        sk:   { name: 'sk',   text: 'SandK' },
+        sd:   { name: 'sd',   text: 'Shado' },
+        sham: { name: 'sham', text: 'Sham' },
+        sil:  { name: 'sil',  text: 'Sil' },
+        sky:  { name: 'sky',  text: 'Skywra' },
+        sl:   { name: 'sl',   text: 'Slardar' },
+        slark:{ name: 'slark',text: 'Slark' },
+        snip: { name: 'snip', text: 'Sniper' },
+        spec: { name: 'spec', text: 'Spectre' },
+        bara: { name: 'bara', text: 'Bara' },
+        storm:{ name: 'storm',text: 'Storm' },
+        sven: { name: 'sven', text: 'Sven' },
+        tech: { name: 'tech', text: 'Tech' },
+        ta:   { name: 'ta',   text: 'Templar' },
+        tb:   { name: 'tb',   text: 'Terror' },
+        tide: { name: 'tide', text: 'Tide' },
+        timb: { name: 'timb', text: 'Timber' },
+        tink: { name: 'tink', text: 'Tinker' },
+        tiny: { name: 'tiny', text: 'Tiny' },
+        tree: { name: 'tree', text: 'Treant' },
+        troll:{ name: 'troll',text: 'Troll' },
+        tusk: { name: 'tusk', text: 'Tusk' },
+        undy: { name: 'undy', text: 'Undying' },
+        ursa: { name: 'ursa', text: 'Ursa' },
+        veng: { name: 'veng', text: 'Venge' },
+        viper:{ name: 'viper',text: 'Viper' },
+        vis:  { name: 'vis',  text: 'Visage' },
+        war:  { name: 'war',  text: 'Warlock' },
+        weave:{ name: 'weave',text: 'Weaver' },
+        wind: { name: 'wind', text: 'Wind' },
+        wint: { name: 'wint', text: 'Winter' },
+        wisp: { name: 'wisp', text: 'Wisp' },
+        wd:   { name: 'wd',   text: 'Witch' },
+        wk:   { name: 'wk',   text: 'Wraith' },
+        zeus: { name: 'zeus', text: 'Zeus' },
     };
 
     app.I = {
@@ -126,6 +180,45 @@ Dotes.app = (function() {
     app.draft[app.H.mp.name]   = { dbuff: [app.H.em, app.H.es, app.H.lich], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.potm.name] = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.morp.name] = { dbuff: [app.H.bm, app.H.np], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.naga.name] = { dbuff: [app.H.lesh, app.H.em], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.necro.name]= { dbuff: [app.H.aa, app.H.pugna], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.sf.name]   = { dbuff: [app.H.tink, app.H.wisp], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ns.name]   = { dbuff: [app.H.mp, app.H.razor], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.nyx.name]  = { dbuff: [app.H.vis, app.H.dk], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.od.name]   = { dbuff: [app.H.nyx, app.H.pugna], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ogre.name] = { dbuff: [app.H.tide, app.H.mp, app.H.pl], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.omni.name] = { dbuff: [app.H.razor, app.H.doom, app.H.lina], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ora.name]  = { dbuff: [app.H.np, app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.pa.name]   = { dbuff: [app.H.tink, app.H.mp], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.pl.name]   = { dbuff: [app.H.em, app.H.es, app.H.timb], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.phx.name]  = { dbuff: [app.H.husk, app.H.jugg], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.puck.name] = { dbuff: [app.H.husk, app.H.spec], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.pudge.name]= { dbuff: [app.H.wisp, app.H.ld], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.qop.name]  = { dbuff: [app.H.ea, app.H.pugna], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.razor.name]= { dbuff: [app.H.slark, app.H.necro], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.riki.name] = { dbuff: [app.H.br, app.H.bh, app.H.bs], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.rub.name]  = { dbuff: [app.H.ec], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.sk.name]   = { dbuff: [app.H.zeus, app.H.phx, app.H.sil], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.sd.name]   = { dbuff: [app.H.ly, app.H.ec], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.sham.name] = { dbuff: [app.H.spec, app.H.snip, app.H.gyro], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.sil.name]  = { dbuff: [app.H.br, app.H.wisp, app.H.ld], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.sky.name]  = { dbuff: [app.H.husk, app.H.ck], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.sl.name]   = { dbuff: [app.H.tide, app.H.ea, app.H.tink], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.slark.name]= { dbuff: [app.H.am, app.H.timb, app.H.puck], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.snip.name] = { dbuff: [app.H.pa, app.H.slark, app.H.ld], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.spec.name] = { dbuff: [app.H.undy, app.H.alch, app.H.wisp], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.bara.name] = { dbuff: [app.H.mp, app.H.ec, app.H.ck], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.storm.name]= { dbuff: [app.H.am, app.H.sil, app.H.ch], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.sven.name] = { dbuff: [app.H.snip, app.H.wind, app.H.medu], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.tech.name] = { dbuff: [app.H.wk, app.H.np, app.H.ta], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.ta.name]   = { dbuff: [app.H.pl, app.H.ds], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.tb.name]   = { dbuff: [app.H.timb, app.H.sk, app.H.lesh], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.tide.name] = { dbuff: [app.H.dp, app.H.snip, app.H.dr], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.timb.name] = { dbuff: [app.H.pugna, app.H.ls, app.H.jugg], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.tink.name] = { dbuff: [app.H.naga, app.H.pudge, app.H.nyx], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.tree.name] = { dbuff: [app.H.pl, app.H.ds, app.H.ursa], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.troll.name]= { dbuff: [app.H.cm, app.H.wind, app.H.ax], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.tusk.name] = { dbuff: [app.H.ta, app.H.wisp, app.H.puck], prof: [app.H.alch], items: [app.H.ta] };
 
     app.debug = function(message) {
         if (DEBUG) console.log(message);
@@ -255,6 +348,47 @@ Dotes.app = (function() {
             app.H.mp,
             app.H.potm,
             app.H.morp,
+            app.H.naga,
+            app.H.necro,
+            app.H.sf,
+            app.H.ns,
+            app.H.nyx,
+            app.H.od,
+            app.H.ogre,
+            app.H.omni,
+            app.H.ora,
+            app.H.pa,
+            app.H.pl,
+            app.H.phx,
+            app.H.puck,
+            app.H.pudge,
+            app.H.pugna,
+            app.H.qop,
+            app.H.razor,
+            app.H.riki,
+            app.H.rub,
+            app.H.sk,
+            app.H.sd,
+            app.H.sham,
+            app.H.sil,
+            app.H.sky,
+            app.H.sl,
+            app.H.slark,
+            app.H.snip,
+            app.H.spec,
+            app.H.bara,
+            app.H.storm,
+            app.H.sven,
+            app.H.tech,
+            app.H.ta,
+            app.H.tb,
+            app.H.tide,
+            app.H.timb,
+            app.H.tink,
+            app.H.tiny,
+            app.H.tree,
+            app.H.troll,
+            app.H.tusk,
         ];
         /* rowParent --> <div class="row">
                             <div class="wrap_row">
