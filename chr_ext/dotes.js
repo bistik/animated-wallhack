@@ -106,6 +106,7 @@ Dotes.app = (function() {
         undy: { name: 'undy', text: 'Undying' },
         ursa: { name: 'ursa', text: 'Ursa' },
         veng: { name: 'veng', text: 'Venge' },
+        veno: { name: 'veno', text: 'Veno' },
         viper:{ name: 'viper',text: 'Viper' },
         vis:  { name: 'vis',  text: 'Visage' },
         war:  { name: 'war',  text: 'Warlock' },
