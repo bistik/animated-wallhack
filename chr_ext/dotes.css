@@ -165,3 +165,15 @@ background-repeat: no-repeat;
 .wd   { background-position: -413px  -330px }
 .wk   { background-position: -472px  -330px }
 .zeus { background-position: -531px  -330px }
+
+.iabys, .iaegis, .idrum, .iarc, .iarm {
+display: inline-block;
+width: 27px;
+height: 20px;
+background-image: url('mugshot_sprite_3.png');
+background-repeat: no-repeat;
+}
+
+.iabys  { background-position:    0px    0px }
+.iaegis { background-position:   27px    0px }
+.idrum  { background-position:   54px    0px }
