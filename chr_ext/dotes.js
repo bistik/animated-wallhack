@@ -128,7 +128,7 @@ Dotes.app = (function() {
 
     app.draft = {};
     app.draft[app.H.art.name]  = { dbuff: [app.H.np, app.H.sd, app.H.od, app.H.am, app.H.undy], prof: [app.H.alch], items: [app.H.ta] };
-    app.draft[app.H.alch.name] = { dbuff: [app.H.ls, app.H.chen, app.H.wisp, app.H.cz, app.H.mp],  prof: [app.H.art],  items: [app.H.ta] };
+    app.draft[app.H.alch.name] = { dbuff: [app.H.naix, app.H.chen, app.H.wisp, app.H.cz, app.H.mp],  prof: [app.H.art],  items: [app.H.ta] };
     app.draft[app.H.aa.name]   = { dbuff: [app.H.bh], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.am.name]   = { dbuff: [app.H.alch, app.H.art], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.ax.name]   = { dbuff: [app.H.bs, app.H.aa], prof: [app.H.alch], items: [app.H.ta] };
