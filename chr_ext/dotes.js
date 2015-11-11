@@ -40,7 +40,7 @@ Dotes.app = (function() {
         ec:   { name: 'ec',   text: 'Enc' },
         eg:   { name: 'eg',   text: 'Eni' },
         fv:   { name: 'fv',   text: 'Void' },
-        np:   { name: 'np',   text: 'Fur' },
+        np:   { name: 'np',   text: 'Furion' },
         gyro: { name: 'gyro', text: 'Gyro' },
         husk: { name: 'husk', text: 'Husk' },
         invo: { name: 'invo', text: 'Invo' },
@@ -71,7 +71,7 @@ Dotes.app = (function() {
         ogre: { name: 'ogre', text: 'Ogre' },
         omni: { name: 'omni', text: 'Omni' },
         ora:  { name: 'ora',  text: 'Ora' },
-        pa:   { name: 'pa',   text: 'PA' },
+        pa:   { name: 'pa',   text: 'Mortred' },
         pl:   { name: 'pl',   text: 'PL' },
         phx:  { name: 'phx',  text: 'Phx' },
         puck: { name: 'puck', text: 'Puck' },
@@ -82,7 +82,7 @@ Dotes.app = (function() {
         riki: { name: 'riki', text: 'Riki' },
         rub:  { name: 'rub',  text: 'Rubick' },
         sk:   { name: 'sk',   text: 'SandK' },
-        sd:   { name: 'sd',   text: 'Shado' },
+        sd:   { name: 'sd',   text: 'Shadow' },
         sham: { name: 'sham', text: 'Sham' },
         sil:  { name: 'sil',  text: 'Sil' },
         sky:  { name: 'sky',  text: 'Skywra' },
@@ -127,8 +127,8 @@ Dotes.app = (function() {
     app.picks = [];
 
     app.draft = {};
-    app.draft[app.H.art.name]  = { dbuff: [app.H.alch], prof: [app.H.alch], items: [app.H.ta] };
-    app.draft[app.H.alch.name] = { dbuff: [app.H.art, app.H.aa],  prof: [app.H.art],  items: [app.H.ta] };
+    app.draft[app.H.art.name]  = { dbuff: [app.H.np, app.H.sd, app.H.od, app.H.am, app.H.undy], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.alch.name] = { dbuff: [app.H.ls, app.H.chen, app.H.wisp, app.H.cz, app.H.mp],  prof: [app.H.art],  items: [app.H.ta] };
     app.draft[app.H.aa.name]   = { dbuff: [app.H.bh], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.am.name]   = { dbuff: [app.H.alch, app.H.art], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.ax.name]   = { dbuff: [app.H.bs, app.H.aa], prof: [app.H.alch], items: [app.H.ta] };
