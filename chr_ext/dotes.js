@@ -267,10 +267,10 @@ Dotes.app = (function() {
     };
 
     /* row of counters, create a div with <a> */
-    app.createRow = function (items) {
+    app.createRow = function (items, cssClass) {
         var frag      = document.createDocumentFragment();
         var div       = document.createElement("div");
-        div.className = 'wrap_row5';
+        div.className = cssClass;
 
         items.forEach(function(item) {
             var a       = document.createElement("a");
@@ -456,8 +456,8 @@ Dotes.app = (function() {
                 }
 
                 // load counters
-                rowParent.appendChild(app.createRow(app.draft[name.name].dbuff));
-                rowParent.appendChild(app.createRow(app.draft[name.name].items));
+                rowParent.appendChild(app.createRow(app.draft[name.name].dbuff, 'wrap_row5'));
+                rowParent.appendChild(app.createRow(app.draft[name.name].items, 'wrap_row5_b'));
             });
             items.push(a);
         });

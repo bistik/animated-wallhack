@@ -10,8 +10,13 @@ min-width: 600px;
 width: 100%;
 }
 .wrap_row5 {
+max-width:595px;
 position: relative;
 display: inline-block;
+}
+.wrap_row5_b {
+position: relative;
+margin-left: 62px;
 }
 .slot {
 display: inline-block;
@@ -175,5 +180,5 @@ background-repeat: no-repeat;
 }
 
 .iabys  { background-position:    0px    0px }
-.iaegis { background-position:   27px    0px }
-.idrum  { background-position:   54px    0px }
+.iaegis { background-position:  -27px    0px }
+.idrum  { background-position:  -54px    0px }
