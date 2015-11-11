@@ -145,7 +145,7 @@ Dotes.app = (function() {
     app.draft[app.H.bt.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.I.drum] };
     app.draft[app.H.cw.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.I.drum] };
     app.draft[app.H.ck.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.I.drum] };
-    app.draft[app.H.chen.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.I.drum] };
+    app.draft[app.H.chen.name] = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.I.drum] };
     app.draft[app.H.cz.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.I.drum] };
     app.draft[app.H.cl.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.I.drum] };
     app.draft[app.H.cm.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.I.drum] };
@@ -457,6 +457,7 @@ Dotes.app = (function() {
 
                 // load counters
                 rowParent.appendChild(app.createRow(app.draft[name.name].dbuff));
+                rowParent.appendChild(app.createRow(app.draft[name.name].items));
             });
             items.push(a);
         });

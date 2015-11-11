@@ -11,4 +11,6 @@ my $conf_file = File::Spec->catfile($ENV{'HOME'}, '.nbkconf');
 
 open my $fh, '<', $conf_file;
 
-
+# get args
+# nbk "text to add to a notebook" <notebook> <tag1> <tag2> <tagN>
+# nbk -s "text to search"

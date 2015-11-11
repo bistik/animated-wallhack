@@ -33,7 +33,7 @@ background-color: #cfc;
 }
 .art, .aa,  .alch, .am, .ab, .ax,
 .bs, .bm, .br, .bw, .bb, .bh, .ba, .bt,
-.cl, .ck, .cw, .cz, .cm, .ch,
+.cl, .ck, .cw, .cz, .cm, .chen,
 .ds, .dz, .dp, .di, .dm, .dk, .dr,
 .ea, .es, .et, .em, .ec, .eg,
 .fv, .np, .gyro, .husk, .invo,
@@ -70,7 +70,7 @@ background-repeat: no-repeat;
 .bt   { background-position: -118px  -33px }
 .cw   { background-position: -177px  -33px }
 .ck   { background-position: -236px  -33px }
-.ch   { background-position: -295px  -33px }
+.chen { background-position: -295px  -33px }
 .cz   { background-position: -354px  -33px }
 .cl   { background-position: -413px  -33px }
 .cm   { background-position: -472px  -33px }

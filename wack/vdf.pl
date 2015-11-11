@@ -30,4 +30,18 @@ my $vdf = <<'VDF';
 }
 VDF
 
+my $vdf2 = <<'VDF';
+"n1"
+{
+            "n2 goo" "v2 goo"
+                "n3"
+                    {
+                                "n4"  "v4"
+                                    }
+}
+VDF
+
+my $vdf3 = qq|"n1"{"n2 goo" "v2 goo""n3"{"n4" "v4"}}|;
 test($vdf, '{}', 0);
+test($vdf2, '"{}', 0);
+test($vdf3, '{}', 0);

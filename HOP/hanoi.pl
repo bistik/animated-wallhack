@@ -4,15 +4,20 @@ use strict;
 use warnings;
 
 sub hanoi {
-    my ($n, $start, $end, $extra) = @_;
+    my ($n, $start, $end, $extra, $func) = @_;
 
     if ($n == 1) {
-        print "Move disk #1 from $start to $end.\n";
+        $func->(1, $start, $end);
     } else {
-        hanoi($n-1, $start, $extra, $end);
-        print "Move disk #$n from $start to $end.\n";
-        hanoi($n-1, $extra, $end, $start);
+        hanoi($n-1, $start, $extra, $end, $func);
+        $func->($n, $start, $end);
+        hanoi($n-1, $extra, $end, $start, $func);
     }
 }
 
-hanoi(3, 'A', 'C', 'B');
+sub print_hanoi {
+    my ($n, $start, $end) =  @_;
+    print "Move disk #$n from $start to $end.\n";
+}
+
+hanoi(3, 'A', 'C', 'B', \&print_hanoi );
