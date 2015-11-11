@@ -22,7 +22,7 @@ Dotes.app = (function() {
         bt:   { name: 'bt',   text: 'Bat' },
         cw:   { name: 'cw',   text: 'Cen' },
         ck:   { name: 'ck',   text: 'Cha' },
-        ch:   { name: 'ch',   text: 'Che' },
+        chen: { name: 'chen', text: 'Chen' },
         cz:   { name: 'cz',   text: 'Cli' },
         cl:   { name: 'cl',   text: 'Clo' },
         cm:   { name: 'cm',   text: 'Cry' },
@@ -142,7 +142,7 @@ Dotes.app = (function() {
     app.draft[app.H.bt.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.cw.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.ck.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
-    app.draft[app.H.ch.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.chen.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.cz.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.cl.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.cm.name]   = { dbuff: [app.H.am], prof: [app.H.alch], items: [app.H.ta] };
@@ -209,7 +209,7 @@ Dotes.app = (function() {
     app.draft[app.H.snip.name] = { dbuff: [app.H.pa, app.H.slark, app.H.ld], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.spec.name] = { dbuff: [app.H.undy, app.H.alch, app.H.wisp], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.bara.name] = { dbuff: [app.H.mp, app.H.ec, app.H.ck], prof: [app.H.alch], items: [app.H.ta] };
-    app.draft[app.H.storm.name]= { dbuff: [app.H.am, app.H.sil, app.H.ch], prof: [app.H.alch], items: [app.H.ta] };
+    app.draft[app.H.storm.name]= { dbuff: [app.H.am, app.H.sil, app.H.chen], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.sven.name] = { dbuff: [app.H.snip, app.H.wind, app.H.medu], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.tech.name] = { dbuff: [app.H.wk, app.H.np, app.H.ta], prof: [app.H.alch], items: [app.H.ta] };
     app.draft[app.H.ta.name]   = { dbuff: [app.H.pl, app.H.ds], prof: [app.H.alch], items: [app.H.ta] };
@@ -325,7 +325,7 @@ Dotes.app = (function() {
             app.H.bt,
             app.H.cw,
             app.H.ck,
-            app.H.ch,
+            app.H.chen,
             app.H.cz,
             app.H.cl,
             app.H.cm,
