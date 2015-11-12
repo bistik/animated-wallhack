@@ -16,6 +16,7 @@ display: inline-block;
 }
 .wrap_row5_b {
 position: relative;
+display: table;
 margin-left: 62px;
 }
 .slot {
@@ -171,7 +172,18 @@ background-repeat: no-repeat;
 .wk   { background-position: -472px  -330px }
 .zeus { background-position: -531px  -330px }
 
-.iabys, .iaegis, .idrum, .iarc, .iarm {
+.iabys, .iaegis, .idrum, .iarc, .iarm, .iac,
+.ibash, .ibelt, .ibf, .ibkb, .ibm, .ialac, .iboa,
+.iblink, .iblood, .iboots, .iboe, .ibott, .ibrace, .ibran, /* row1 */
+.ibroad, .ibuck, .ibfly, .ichain. .ichee, .icirc, .iclar,
+.iclay, .icloak, .icour, .icrim, .ieuls, .idagon, .idemon, 
+.ideso, .idiff, .idiff2, .idust, .ieagle, .imango, /* row2 */
+.ieboo, .ieth, .isalve, .icour2, .iforce, .igstr, .igem,
+.ighost, .iglim, .ihaste, .idae, .iggr, .imidas, .ihead,
+.iheart, .ihalb, .ihelm, .ihotd, .ihood, .ihyper, /* row3 */
+.isb, .ijav, .icrys, .imask, .ilotus, .imael, .iwand, .iwand2,
+.imanta
+{
 display: inline-block;
 width: 27px;
 height: 20px;
@@ -182,3 +194,11 @@ background-repeat: no-repeat;
 .iabys  { background-position:    0px    0px }
 .iaegis { background-position:  -27px    0px }
 .idrum  { background-position:  -54px    0px }
+.iarc   { background-position:  -81px    0px }
+.iarm   { background-position: -108px    0px }
+.iac    { background-position: -135px    0px }
+.ibash  { background-position: -162px    0px }
+.ibelt  { background-position: -189px    0px }
+.ibf    { background-position: -216px    0px }
+.ibkb   { background-position: -243px    0px }
+.ibm    { background-position: -270px    0px }

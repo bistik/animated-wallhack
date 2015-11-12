@@ -125,6 +125,7 @@ Dotes.app = (function() {
         drum:  { name: 'idrum',  text: 'Drum' },
         arc:   { name: 'iarc',   text: 'Arcane' },
         arm:   { name: 'iarm',   text: 'Armlet' },
+        ac:    { name: 'iac',    text: 'Assault' },
     };
 
     app.picks = [];
