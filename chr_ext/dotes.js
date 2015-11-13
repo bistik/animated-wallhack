@@ -131,6 +131,14 @@ Dotes.app = (function() {
         bf:    { name: 'ibf',    text: 'Battlefury' },
         bkb:   { name: 'ibkb',   text: 'BKBar' },
         bm:    { name: 'ibm',    text: 'Blademail' },
+        alac:  { name: 'ialac',  text: 'BOfAlacrity' },
+        boa:   { name: 'iboa',   text: 'BOfAttack' },
+        blood: { name: 'iblood', text: 'Bloodstone' },
+        boots: { name: 'iboots', text: 'Boots' },
+        boe:   { name: 'iboe',   text: 'BandOfElven' },
+        bott:  { name: 'ibott',  text: 'Bottle' },
+        brace: { name: 'ibrace', text: 'Bracer' },
+        brnch: { name: 'ibrnch', text: 'Branch' },
     };
 
     app.picks = [];
