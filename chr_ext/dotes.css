@@ -37,24 +37,7 @@ margin-bottom: 10px;
 z-index: 6;
 background-color: #cfc;
 }
-.art, .aa,  .alch, .am, .ab, .ax,
-.bs, .bm, .br, .bw, .bb, .bh, .ba, .bt,
-.cl, .ck, .cw, .cz, .cm, .chen,
-.ds, .dz, .dp, .di, .dm, .dk, .dr,
-.ea, .es, .et, .em, .ec, .eg,
-.fv, .np, .gyro, .husk, .invo,
-.jak, .jugg, .kotl, .ku,
-.lc, .lesh, .lich, .naix, .lina, .lion, .ld, .luna, .ly,
-.mag, .med, .mp, .potm, .morp,
-.naga, .necro, .sf, .ns, .nyx,
-.od, .ogre, .omni, .ora,
-.pa, .pl, .phx, .puck, .pudge, .pugna,
-.qop, .razor, .riki, .rub,
-.sk, .sd, .sham, .sil, .sky, .sl, .slark, .snip, .spec, .bara, .storm, .sven,
-.tech, .ta, .tb, .tide, .timb, .tink, .tiny, .tree, .troll, .tusk,
-.undy, .ursa, .veng, .veno, .viper, .vis,
-.war, .weave, .wind, .wint, .wisp, .wd, .wk, .zeus
- {
+.hero {
 display: inline-block;
 width: 59px;
 height: 33px;
@@ -172,25 +155,13 @@ background-repeat: no-repeat;
 .wk   { background-position: -472px  -330px }
 .zeus { background-position: -531px  -330px }
 
-.iabys, .iaegis, .idrum, .iarc, .iarm, .iac,
-.ibash, .ibelt, .ibf, .ibkb, .ibm, .ialac, .iboa,
-.iblink, .iblood, .iboots, .iboe, .ibott, .ibrace, .ibran, /* row1 */
-.ibroad, .ibuck, .ibfly, .ichain. .ichee, .icirc, .iclar,
-.iclay, .icloak, .icour, .icrim, .ieuls, .idagon, .idemon, 
-.ideso, .idiff, .idiff2, .idust, .ieagle, .imango, /* row2 */
-.ieboo, .ieth, .isalve, .icour2, .iforce, .igstr, .igem,
-.ighost, .iglim, .ihaste, .idae, .iggr, .imidas, .ihead,
-.iheart, .ihalb, .ihelm, .ihotd, .ihood, .ihyper, /* row3 */
-.isb, .ijav, .icrys, .imask, .ilotus, .imael, .iwand, .iwand2,
-.imanta
-{
+.item {
 display: inline-block;
 width: 27px;
 height: 20px;
 background-image: url('mugshot_sprite_3.png');
 background-repeat: no-repeat;
 }
-
 .iabys  { background-position:    0px    0px }
 .iaegis { background-position:  -27px    0px }
 .idrum  { background-position:  -54px    0px }

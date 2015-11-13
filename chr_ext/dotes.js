@@ -127,7 +127,10 @@ Dotes.app = (function() {
         arm:   { name: 'iarm',   text: 'Armlet' },
         ac:    { name: 'iac',    text: 'Assault' },
         bash:  { name: 'ibash',  text: 'Basher' },
-        belt:  { name: 'ibelt',  text: 'BeltOfStr' },
+        belt:  { name: 'ibelt',  text: 'Belt' },
+        bf:    { name: 'ibf',    text: 'Battlefury' },
+        bkb:   { name: 'ibkb',   text: 'BKBar' },
+        bm:    { name: 'ibm',    text: 'Blademail' },
     };
 
     app.picks = [];
@@ -270,7 +273,7 @@ Dotes.app = (function() {
     };
 
     /* row of counters, create a div with <a> */
-    app.createRow = function (items, cssClass) {
+    app.createRow = function (items, cssClass, commonClass) {
         var frag      = document.createDocumentFragment();
         var div       = document.createElement("div");
         div.className = cssClass;
@@ -279,7 +282,7 @@ Dotes.app = (function() {
             var a       = document.createElement("a");
             var text    = document.createTextNode(item.text);
             a.appendChild(text);
-            a.className = 'slot ' + item.name;
+            a.className = 'slot ' + item.name + ' ' + commonClass;
             a.setAttribute('href', '#');
             div.appendChild(a);
         });
@@ -434,7 +437,7 @@ Dotes.app = (function() {
         names.forEach(function(name) {
             var a       = document.createElement("a");
             var text    = document.createTextNode(name.text);
-            a.className = name.name;
+            a.className = name.name + ' hero';
             a.appendChild(text);
             a.setAttribute('href', '#');
             a.addEventListener('click', function() {
@@ -459,8 +462,8 @@ Dotes.app = (function() {
                 }
 
                 // load counters
-                rowParent.appendChild(app.createRow(app.draft[name.name].dbuff, 'wrap_row5'));
-                rowParent.appendChild(app.createRow(app.draft[name.name].items, 'wrap_row5_b'));
+                rowParent.appendChild(app.createRow(app.draft[name.name].dbuff, 'wrap_row5', 'hero'));
+                rowParent.appendChild(app.createRow(app.draft[name.name].items, 'wrap_row5_b', 'item'));
             });
             items.push(a);
         });
