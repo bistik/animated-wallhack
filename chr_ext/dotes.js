@@ -126,13 +126,15 @@ Dotes.app = (function() {
         arc:   { name: 'iarc',   text: 'Arcane' },
         arm:   { name: 'iarm',   text: 'Armlet' },
         ac:    { name: 'iac',    text: 'Assault' },
+        bash:  { name: 'ibash',  text: 'Basher' },
+        belt:  { name: 'ibelt',  text: 'BeltOfStr' },
     };
 
     app.picks = [];
 
     app.draft = {};
     app.draft[app.H.art.name]  = { dbuff: [app.H.np, app.H.sd, app.H.od, app.H.am, app.H.undy], prof: [app.H.alch], items: [app.I.abys, app.I.aegis, app.I.drum, app.I.abys, app.I.abys] };
-    app.draft[app.H.alch.name] = { dbuff: [app.H.naix, app.H.chen, app.H.wisp, app.H.cz, app.H.mp],  prof: [app.H.art],  items: [app.I.drum, app.I.drum, app.I.drum, app.I.drum] };
+    app.draft[app.H.alch.name] = { dbuff: [app.H.naix, app.H.chen, app.H.wisp, app.H.cz, app.H.mp],  prof: [app.H.art],  items: [app.I.drum, app.I.belt, app.I.bm, app.I.drum] };
     app.draft[app.H.aa.name]   = { dbuff: [app.H.bh], prof: [app.H.alch], items: [app.I.drum] };
     app.draft[app.H.am.name]   = { dbuff: [app.H.alch, app.H.art], prof: [app.H.alch], items: [app.I.drum] };
     app.draft[app.H.ax.name]   = { dbuff: [app.H.bs, app.H.aa], prof: [app.H.alch], items: [app.I.drum] };
