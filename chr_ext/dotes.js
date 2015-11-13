@@ -7,21 +7,21 @@ Dotes.app = (function() {
     var DEBUG = 1;
 
     app.H = {
-        art:  { name: 'art',  text: 'Aba' },
-        alch: { name: 'alch', text: 'Alc' },
-        aa:   { name: 'aa',   text: 'Anc' },
-        am:   { name: 'am',   text: 'Ant' },
+        art:  { name: 'art',  text: 'Abaddon' },
+        alch: { name: 'alch', text: 'Alchemist' },
+        aa:   { name: 'aa',   text: 'Ancient Apparition' },
+        am:   { name: 'am',   text: 'Anti-mage' },
         ax:   { name: 'ax',   text: 'Axe' },
-        bs:   { name: 'bs',   text: 'Blo' },
-        bm:   { name: 'bm',   text: 'Bea' },
-        br:   { name: 'br',   text: 'Bro' },
-        bw:   { name: 'bw',   text: 'Bre' },
-        bb:   { name: 'bb',   text: 'Bri' },
-        bh:   { name: 'bh',   text: 'Bou' },
-        ba:   { name: 'ba',   text: 'Ban' },
-        bt:   { name: 'bt',   text: 'Bat' },
-        cw:   { name: 'cw',   text: 'Cen' },
-        ck:   { name: 'ck',   text: 'Cha' },
+        bs:   { name: 'bs',   text: 'Bloodseeker' },
+        bm:   { name: 'bm',   text: 'Beast Master' },
+        br:   { name: 'br',   text: 'Broodmother' },
+        bw:   { name: 'bw',   text: 'Brewmaster' },
+        bb:   { name: 'bb',   text: 'Bristleback' },
+        bh:   { name: 'bh',   text: 'Bounty Hunter' },
+        ba:   { name: 'ba',   text: 'Bane' },
+        bt:   { name: 'bt',   text: 'Bat Rider' },
+        cw:   { name: 'cw',   text: 'Centaur Warrunner' },
+        ck:   { name: 'ck',   text: 'Chaos Knight' },
         chen: { name: 'chen', text: 'Chen' },
         cz:   { name: 'cz',   text: 'Cli' },
         cl:   { name: 'cl',   text: 'Clo' },
@@ -139,12 +139,13 @@ Dotes.app = (function() {
         bott:  { name: 'ibott',  text: 'Bottle' },
         brace: { name: 'ibrace', text: 'Bracer' },
         brnch: { name: 'ibrnch', text: 'Branch' },
+        broad: { name: 'ibroad', text: 'Broadsword' }
     };
 
     app.picks = [];
 
     app.draft = {};
-    app.draft[app.H.art.name]  = { dbuff: [app.H.np, app.H.sd, app.H.od, app.H.am, app.H.undy], prof: [app.H.alch], items: [app.I.abys, app.I.aegis, app.I.drum, app.I.abys, app.I.abys] };
+    app.draft[app.H.art.name]  = { dbuff: [app.H.np, app.H.sd, app.H.od, app.H.am, app.H.undy], prof: [app.H.alch], items: [app.I.abys, app.I.aegis, app.I.drum, app.I.broad, app.I.brnch] };
     app.draft[app.H.alch.name] = { dbuff: [app.H.naix, app.H.chen, app.H.wisp, app.H.cz, app.H.mp],  prof: [app.H.art],  items: [app.I.drum, app.I.belt, app.I.bm, app.I.drum] };
     app.draft[app.H.aa.name]   = { dbuff: [app.H.bh], prof: [app.H.alch], items: [app.I.drum] };
     app.draft[app.H.am.name]   = { dbuff: [app.H.alch, app.H.art], prof: [app.H.alch], items: [app.I.drum] };
@@ -288,10 +289,11 @@ Dotes.app = (function() {
 
         items.forEach(function(item) {
             var a       = document.createElement("a");
-            var text    = document.createTextNode(item.text);
+            var text    = document.createTextNode("");
             a.appendChild(text);
             a.className = 'slot ' + item.name + ' ' + commonClass;
             a.setAttribute('href', '#');
+            a.setAttribute('title', item.text);
             div.appendChild(a);
         });
 
@@ -444,10 +446,11 @@ Dotes.app = (function() {
         var rowParent = pickerNode.parentNode.parentNode;
         names.forEach(function(name) {
             var a       = document.createElement("a");
-            var text    = document.createTextNode(name.text);
+            var text    = document.createTextNode(" ");
             a.className = name.name + ' hero';
             a.appendChild(text);
             a.setAttribute('href', '#');
+            a.setAttribute('title', name.text);
             a.addEventListener('click', function() {
                 //save the pick
                 app.picks[pickerNode.index - 1] = name
