@@ -200,3 +200,6 @@ https://www.youtube.com/watch?v=QfsfoFqsFk4
 
 freebooting
 https://www.youtube.com/watch?v=t7tA3NNKF0Q&feature=em-uploademail
+
+perl dancer single page application
+http://perlmaven.com/dancer2-angularjs-single-page-application
