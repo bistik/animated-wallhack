@@ -206,3 +206,6 @@ http://perlmaven.com/dancer2-angularjs-single-page-application
 
 gaming keyboard
 http://www.lazada.com.my/razer-deathstalker-essential-2014-gaming-keyboard-black-4110411.html
+
+perl6 intro
+http://perl6intro.com/
