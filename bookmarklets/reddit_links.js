@@ -27,9 +27,9 @@
     selection.appendChild(selectionText);
     document.body.appendChild(selection);
     var range = document.createRange();
-    selection = document.querySElector('#'+idSelection);
+    selection = document.querySelector('#'+idSelection);
     range.selectNode(selection);
-    window.getSElection().addRange(range);
+    window.getSelection().addRange(range);
     var copySuccess = document.execCommand('copy');
     var msgboxText = copySuccess ? 'copied sitetable links' : 'error';
     window.getSelection().removeAllRanges();
