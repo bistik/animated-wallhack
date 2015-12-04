@@ -12,10 +12,10 @@
     msgbox.style.textAlign = 'center';
     msgbox.style.fontSize = '21px';
     msgbox.style.color = '#ddd';
-    idv.style.borderRadius = '8px';
+    msgbox.style.borderRadius = '8px';
     var msg = '';
-    var selection = document.createElement('p');
-    var idSelection = 'p' + (new Date).getTime();
+    var selection = document.createElement('pre');
+    var idSelection = 'pre' + (new Date).getTime();
     var linkNodes = document.querySelectorAll('div#siteTable div.link div.entry a.title');
     var links = Array.from(linkNodes);
     links.forEach(function(link){
