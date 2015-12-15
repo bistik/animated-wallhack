@@ -4,7 +4,7 @@
   <meta charset="<% settings.charset %>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>ggbucket</title>
-  <link rel="stylesheet" href="<% request.uri_base %>/css/style.css">
+  <link rel="stylesheet" type="text/css" href="[% css_url %]" />
 
 <!-- Grab jQuery from a CDN, fall back to local if necessary -->
 <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -14,9 +14,19 @@
 
 </head>
 <body>
-<% content %>
-<div id="footer">
-Powered by <a href="http://perldancer.org/">Dancer2</a> <% dancer_version %>
+<div class=page>
+    <h1>ggbucket</h1>
+    <div class=nav>
+    [% IF not session.logged_in %]
+        <a href="[% login_url %]">log in</a>
+    [% ELSE %]
+        <a href="[% logout_url %]">log out</a>
+    [% END %]
+    </div>
+    [% IF msg %]
+    <div class=flash>[% msg %]</div>
+    [% END %]
+    [% content %]
 </div>
 </body>
 </html>

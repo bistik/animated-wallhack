@@ -1,0 +1,49 @@
+[% IF session.logged_in %]
+    <form action="[% add_entry_url %]" method=post class=add-entry>
+        <dl>
+            <dt>Name:</dt>
+            <dd><input type="text" size=30 name=name /></dd>
+            <dt>Primary Attribute</dt>
+            <dd><input type="radio" name="primary_attr" value="agi">Agi
+                <input type="radio" name="primary_attr" value="int">Int
+                <input type="radio" name="primary_attr" value="str">Str</dd>
+            <dt>Roles:</dt>
+            <dd>
+                <ul>
+                    <li><input type="checkbox" name="roles" value="carry">Carry</li>
+                    <li><input type="checkbox" name="roles" value="disabler">Disabler</li>
+                    <li><input type="checkbox" name="roles" value="lane_support">Lane Support</li>
+                    <li><input type="checkbox" name="roles" value="initiator">Initiator</li>
+                    <li><input type="checkbox" name="roles" value="jungler">Jungler</li>
+                    <li><input type="checkbox" name="roles" value="support">Support</li>
+                    <li><input type="checkbox" name="roles" value="durable">Durable</li>
+                    <li><input type="checkbox" name="roles" value="nuker">Nuker</li>
+                    <li><input type="checkbox" name="roles" value="pusher">Pusher</li>
+                    <li><input type="checkbox" name="roles" value="escape">Escape</li>
+                    <li><input type="checkbox" name="roles" value="hard_carry">Hard Carry</li>
+                    <li><input type="checkbox" name="roles" value="semi_carry">Semi Carry</li>
+                    <li><input type="checkbox" name="roles" value="ganker">Ganker</li>
+                    <li><input type="checkbox" name="roles" value="roamer">Roamer</li>
+                    <li><input type="checkbox" name="roles" value="offlaner">Offlaner</li>
+                </ul>
+            </dd>
+            <dd><input type="submit" value="Add" /></dd>
+        </dl>
+    </form>
+[% END %]
+[% IF heroes.size %]
+<table class="heroes">
+    <tr>
+        <th>hero</th>
+        <th>primary attr</th>
+    </tr>
+    [% FOREACH id IN heroes.keys.nsort %]
+    <tr>
+        <td>[% hereoes.$id.name %]</td>
+        <td>[% hereoes.$id.primary_attr %]</td>
+    </tr>
+    [% END %]
+</table>
+[% ELSE %]
+<p>I guess the world doesn't need heroes</p>
+[% END %]
