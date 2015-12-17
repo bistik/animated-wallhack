@@ -209,3 +209,6 @@ http://www.lazada.com.my/razer-deathstalker-essential-2014-gaming-keyboard-black
 
 perl6 intro
 http://perl6intro.com/
+
+modern web dev with perl
+http://www.slideshare.net/davorg/modern-web-development-with-perl
