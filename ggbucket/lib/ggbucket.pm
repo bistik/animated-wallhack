@@ -8,7 +8,7 @@ use File::Spec;
 use File::Slurper qw(read_text);
 use Template;
 
-set 'database'      => File::Spec->catfile(File::Spec->tmpdir(), 'dancr.db');
+set 'database'      => File::Spec->catfile(File::Spec->curdir(), 'dancr.db');
 set 'session'       => 'Simple';
 set 'template'      => 'template_toolkit';
 set 'logger'        => 'console';
@@ -63,7 +63,7 @@ get '/' => sub {
     template 'show_heroes.tt', {
         'msg' => get_flash(),
         'add_entry_url' => uri_for('/add'),
-        'entries' => $sth->fetchall_hashref('id'),
+        'heroes' => $sth->fetchall_hashref('id'),
     };
 };
 
@@ -75,7 +75,7 @@ post '/add' => sub {
     my $db = connect_db();
     my $sql = 'insert into heroes (name, primary_attr, roles) values (?, ?, ?)';
     my $sth = $db->prepare($sql) or die $db->errstr;
-    $sth->execute(params->{'title'}, params->{'text'}) or die $sth->errstr;
+    $sth->execute(params->{'name'}, params->{'primary_attr'}, params->{'roles'}) or die $sth->errstr;
 
     set_flash('New hero posted!');
     redirect '/';

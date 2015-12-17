@@ -39,11 +39,17 @@
     </tr>
     [% FOREACH id IN heroes.keys.nsort %]
     <tr>
-        <td>[% hereoes.$id.name %]</td>
-        <td>[% hereoes.$id.primary_attr %]</td>
+        <td>[% heroes.$id.name %]</td>
+        <td>[% heroes.$id.primary_attr %]</td>
     </tr>
     [% END %]
 </table>
 [% ELSE %]
 <p>I guess the world doesn't need heroes</p>
 [% END %]
+<h2>TODO</h2>
+<ul>
+<li>complete fields in add form</li>
+<li>editable hero</li>
+<li>add hero image</li>
+</ul>
