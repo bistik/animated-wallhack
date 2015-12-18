@@ -75,7 +75,9 @@ post '/add' => sub {
     my $db = connect_db();
     my $sql = 'insert into heroes (name, primary_attr, roles) values (?, ?, ?)';
     my $sth = $db->prepare($sql) or die $db->errstr;
-    $sth->execute(params->{'name'}, params->{'primary_attr'}, params->{'roles'}) or die $sth->errstr;
+    my @roles = params->{'roles'};
+    debug "ROLES: @roles";
+    $sth->execute(params->{'name'}, params->{'primary_attr'}, join ',', @roles) or die $sth->errstr;
 
     set_flash('New hero posted!');
     redirect '/';
