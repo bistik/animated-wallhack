@@ -13,6 +13,7 @@ set 'session'       => 'Simple';
 set 'template'      => 'template_toolkit';
 set 'logger'        => 'console';
 set 'log'           => 'debug';
+set 'log_level'     => 'debug';
 set 'show_errors'   => 1;
 set 'startup_info'  => 1;
 set 'warnings'      => 1;
@@ -57,7 +58,11 @@ hook before_template => sub {
 
 get '/' => sub {
     my $db = connect_db();
-    my $sql = 'select id, name, primary_attr, roles from heroes order by id desc';
+    my $sql = qq(select 
+        id, name, primary_attr, roles, lore,
+        str, agi, int, str_growth, agi_growth, int_growth, hp, mana, hp_regen, mana_regen, damage, bat
+        from heroes
+        order by id desc);
     my $sth = $db->prepare($sql) or die $db->errstr;
     $sth->execute or die $sth->errstr;
     template 'show_heroes.tt', {
@@ -73,10 +78,24 @@ post '/add' => sub {
     }
 
     my $db = connect_db();
-    my $sql = 'insert into heroes (name, primary_attr, roles, lore, str, agi, int) values (?, ?, ?, ?, ?, ?, ?)';
+    my $sql = qq|insert into heroes 
+        (name, primary_attr, roles, lore, str,
+         agi, int, str_growth, agi_growth, int_growth,
+         hp, mana, hp_regen, mana_regen, damage,
+         bat)
+        values
+        (?, ?, ?, ?, ?,
+         ?, ?, ?, ?, ?,
+         ?, ?, ?, ?, ?,
+         ?)
+        |;
     my $sth = $db->prepare($sql) or die $db->errstr;
     my $roles = join ',', @{ params->{'roles'} } ;
-    $sth->execute(params->{'name'}, params->{'primary_attr'}, $roles) or die $sth->errstr;
+    $sth->execute(params->{'name'}, params->{'primary_attr'}, $roles, params->{'lore'}, params->{'str'},
+                params->{'agi'}, params->{'int'}, params->{'str_growth'}, params->{'agi_growth'}, params->{'int_growth'},
+                params->{'hp'}, params->{'mana'}, params->{'hp_regen'}, params->{'mana_regen'}, params->{'damage'},
+                params->{'bat'}
+                ) or die $sth->errstr;
 
     set_flash('New hero posted!');
     redirect '/';

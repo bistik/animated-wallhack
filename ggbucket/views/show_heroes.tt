@@ -29,12 +29,19 @@
             <div>Lore: <textarea name="lore" rows="3" cols="80"></textarea></div>
         </fieldset>
         <fieldset>
-            <div>Base Strength <input type="text" size="3" name="str" /></div>
-            <div>Base Agility <input type="text" size="3" name="agi" /></div>
-            <div>Base Int <input type="text" size="3" name="int" /></div>
+            <legend>Stats</legend>
+            <div>Strength <input type="text" size="3" name="str" /></div>
+            <div>Agility <input type="text" size="3" name="agi" /></div>
+            <div>Int <input type="text" size="3" name="int" /></div>
             <div>Strength growth <input type="text" size="3" name="str_growth" /></div>
             <div>Agility growth <input type="text" size="3" name="agi_growth" /></div>
             <div>Int growth <input type="text" size="3" name="int_growth" /></div>
+            <div>HP <input type="text" size="3" name="hp" /></div>
+            <div>Mana <input type="text" size="3" name="mana" /></div>
+            <div>HP regen<input type="text" size="3" name="hp_regen" /></div>
+            <div>Mana regen<input type="text" size="3" name="mana_regen" /></div>
+            <div>Damage<input type="text" size="3" name="damage" /></div>
+            <div>BAT<input type="text" size="3" name="bat" /></div>
         </fieldset>
         <div><input type="submit" value="Add" />
     </form>
@@ -44,11 +51,39 @@
     <tr>
         <th>hero</th>
         <th>primary attr</th>
+        <th>roles</th>
+        <th>lore</th>
+        <th>str</th>
+        <th>agi</th>
+        <th>int</th>
+        <th>str_growth</th>
+        <th>agi_growth</th>
+        <th>int_growth</th>
+        <th>hp</th>
+        <th>mana</th>
+        <th>hp_regen</th>
+        <th>mana_regen</th>
+        <th>damage</th>
+        <th>bat</th>
     </tr>
     [% FOREACH id IN heroes.keys.nsort %]
     <tr>
         <td>[% heroes.$id.name %]</td>
         <td>[% heroes.$id.primary_attr %]</td>
+        <td>[% heroes.$id.roles %]</td>
+        <td>[% heroes.$id.lore %]</td>
+        <td>[% heroes.$id.str %]</td>
+        <td>[% heroes.$id.agi %]</td>
+        <td>[% heroes.$id.int %]</td>
+        <td>[% heroes.$id.str_growth %]</td>
+        <td>[% heroes.$id.agi_growth %]</td>
+        <td>[% heroes.$id.int_growth %]</td>
+        <td>[% heroes.$id.hp %]</td>
+        <td>[% heroes.$id.mana %]</td>
+        <td>[% heroes.$id.hp_regen %]</td>
+        <td>[% heroes.$id.mana_regen %]</td>
+        <td>[% heroes.$id.damage %]</td>
+        <td>[% heroes.$id.bat %]</td>
     </tr>
     [% END %]
 </table>
