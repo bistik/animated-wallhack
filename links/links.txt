@@ -212,3 +212,6 @@ http://perl6intro.com/
 
 modern web dev with perl
 http://www.slideshare.net/davorg/modern-web-development-with-perl
+
+what web dev should know about ssl
+https://certsimple.com/blog/obsolete-cipher-suite-and-things-web-developers-should-know-about-ssl
