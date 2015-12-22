@@ -1,14 +1,13 @@
 [% IF session.logged_in %]
     <form action="[% add_entry_url %]" method=post class=add-entry>
-        <dl>
-            <dt>Name:</dt>
-            <dd><input type="text" size=30 name=name /></dd>
-            <dt>Primary Attribute</dt>
-            <dd><input type="radio" name="primary_attr" value="agi">Agi
+        <fieldset>
+            <div>Name <input type="text" size=30 name=name /></div>
+            <div style="display:inline">Primary Attribute
+                <input type="radio" name="primary_attr" value="agi">Agi
                 <input type="radio" name="primary_attr" value="int">Int
-                <input type="radio" name="primary_attr" value="str">Str</dd>
-            <dt>Roles:</dt>
-            <dd>
+                <input type="radio" name="primary_attr" value="str">Str
+            </div>
+            <div>Roles:
                 <ul>
                     <li><input type="checkbox" name="roles" value="carry">Carry</li>
                     <li><input type="checkbox" name="roles" value="disabler">Disabler</li>
@@ -26,25 +25,18 @@
                     <li><input type="checkbox" name="roles" value="roamer">Roamer</li>
                     <li><input type="checkbox" name="roles" value="offlaner">Offlaner</li>
                 </ul>
-            </dd>
-            <dt>Lore:</dt>
-            <dd>
-                <textarea name="lore" rows="3" cols="80"></textarea>
-            </dd>
-            <dt>Strength:</dt>
-            <dd><input type="text" size="3" name="str" /></dd>
-            <dt>Agility:</dt>
-            <dd><input type="text" size="3" name="agi" /></dd>
-            <dt>Intelligence:</dt>
-            <dd><input type="text" size="3" name="int" /></dd>
-            <dd><input type="submit" value="Add" /></dd>
-            <dt>Strength growth:</dt>
-            <dd><input type="text" size="3" name="str_growth" /></dd>
-            <dt>Agility growth:</dt>
-            <dd><input type="text" size="3" name="agi_growth" /></dd>
-            <dt>Int growth:</dt>
-            <dd><input type="text" size="3" name="int_growth" /></dd>
-        </dl>
+            </div>
+            <div>Lore: <textarea name="lore" rows="3" cols="80"></textarea></div>
+        </fieldset>
+        <fieldset>
+            <div>Base Strength <input type="text" size="3" name="str" /></div>
+            <div>Base Agility <input type="text" size="3" name="agi" /></div>
+            <div>Base Int <input type="text" size="3" name="int" /></div>
+            <div>Strength growth <input type="text" size="3" name="str_growth" /></div>
+            <div>Agility growth <input type="text" size="3" name="agi_growth" /></div>
+            <div>Int growth <input type="text" size="3" name="int_growth" /></div>
+        </fieldset>
+        <div><input type="submit" value="Add" />
     </form>
 [% END %]
 [% IF heroes.size %]

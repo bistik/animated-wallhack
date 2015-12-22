@@ -73,7 +73,7 @@ post '/add' => sub {
     }
 
     my $db = connect_db();
-    my $sql = 'insert into heroes (name, primary_attr, roles) values (?, ?, ?)';
+    my $sql = 'insert into heroes (name, primary_attr, roles, lore, str, agi, int) values (?, ?, ?, ?, ?, ?, ?)';
     my $sth = $db->prepare($sql) or die $db->errstr;
     my $roles = join ',', @{ params->{'roles'} } ;
     $sth->execute(params->{'name'}, params->{'primary_attr'}, $roles) or die $sth->errstr;
