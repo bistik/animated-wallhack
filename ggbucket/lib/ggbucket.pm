@@ -50,7 +50,6 @@ sub init_db {
 hook before_template => sub {
     my $tokens = shift;
 
-    debug "\n\n\tTEST\n\n";
     $tokens->{'css_url'} = request->base . 'css/style.css';
     $tokens->{'login_url'} = uri_for('/login');
     $tokens->{'logout_url'} = uri_for('/logout');
@@ -60,7 +59,8 @@ get '/' => sub {
     my $db = connect_db();
     my $sql = qq(select 
         id, name, primary_attr, roles, lore,
-        str, agi, int, str_growth, agi_growth, int_growth, hp, mana, hp_regen, mana_regen, damage, bat
+        str, agi, int, str_growth, agi_growth, int_growth, hp, mana, hp_regen, mana_regen, damage,
+        bat, move_speed, day_vision, night_vision, attack_range, turn_rate, missile_speed
         from heroes
         order by id desc);
     my $sth = $db->prepare($sql) or die $db->errstr;
@@ -82,7 +82,8 @@ post '/add' => sub {
         (name, primary_attr, roles, lore, str,
          agi, int, str_growth, agi_growth, int_growth,
          hp, mana, hp_regen, mana_regen, damage,
-         bat)
+         bat, move_speed, day_vision, night_vision,
+         attack_range, turn_rate, missile_speed)
         values
         (?, ?, ?, ?, ?,
          ?, ?, ?, ?, ?,
@@ -94,7 +95,8 @@ post '/add' => sub {
     $sth->execute(params->{'name'}, params->{'primary_attr'}, $roles, params->{'lore'}, params->{'str'},
                 params->{'agi'}, params->{'int'}, params->{'str_growth'}, params->{'agi_growth'}, params->{'int_growth'},
                 params->{'hp'}, params->{'mana'}, params->{'hp_regen'}, params->{'mana_regen'}, params->{'damage'},
-                params->{'bat'}
+                params->{'bat'}, params->{'move_speed'}, params->{'day_vision'}, params->{'night_vision'},
+                params->{'attack_range'}, params->{'turn_rate'}, params->{'missile_speed'}
                 ) or die $sth->errstr;
 
     set_flash('New hero posted!');

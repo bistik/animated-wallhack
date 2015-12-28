@@ -42,6 +42,12 @@
             <div>Mana regen<input type="text" size="3" name="mana_regen" /></div>
             <div>Damage<input type="text" size="3" name="damage" /></div>
             <div>BAT<input type="text" size="3" name="bat" /></div>
+            <div>Movespeed<input type="text" size="3" name="move_speed" /></div>
+            <div>Day Vision<input type="text" size="4" name="day_vision" /></div>
+            <div>Night Vision<input type="text" size="4" name="night_vision" /></div>
+            <div>Attack Range (128 for melee)<input type="text" size="4" name="attack_range" /></div>
+            <div>Turn Rate<input type="text" size="4" name="turn_rate" /></div>
+            <div>Missile Speed<input type="text" size="4" name="missile_speed" /></div>
         </fieldset>
         <div><input type="submit" value="Add" />
     </form>
@@ -65,6 +71,12 @@
         <th>mana_regen</th>
         <th>damage</th>
         <th>bat</th>
+        <th>move_speed</th>
+        <th>day_vision</th>
+        <th>night_vision</th>
+        <th>attack_range</th>
+        <th>turn_rate</th>
+        <th>missile_speed</th>
     </tr>
     [% FOREACH id IN heroes.keys.nsort %]
     <tr>
@@ -84,6 +96,12 @@
         <td>[% heroes.$id.mana_regen %]</td>
         <td>[% heroes.$id.damage %]</td>
         <td>[% heroes.$id.bat %]</td>
+        <td>[% heroes.$id.move_speed %]</td>
+        <td>[% heroes.$id.day_vision %]</td>
+        <td>[% heroes.$id.night_vision %]</td>
+        <td>[% heroes.$id.attack_range %]</td>
+        <td>[% heroes.$id.turn_rate %]</td>
+        <td>[% heroes.$id.missile_speed %]</td>
     </tr>
     [% END %]
 </table>
