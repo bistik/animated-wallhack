@@ -36,6 +36,23 @@ sub get_flash {
     return $msg;
 }
 
+sub hero_columns {
+    my $func = shift;
+
+    my @columns = qw(id name primary_attr roles lore
+                     str agi int str_growth agi_growth
+                     int_growth hp mana hp_regen mana_regen
+                     damage bat move_speed day_vision night_vision
+                     attack_range turn_rate missile_speed);
+    my @transformed;
+    foreach my $col ( @columns ) {
+        my $transformed_value = $func->($col);
+        push @transformed, $func->($col);
+    }
+
+    return grep { defined $_ } @transformed;
+}
+
 sub connect_db {
     my $dbh = DBI->connect("dbi:SQLite:dbname=".setting('database')) or die $DBI::errstr;
     return $dbh;
@@ -57,12 +74,9 @@ hook before_template => sub {
 
 get '/' => sub {
     my $db = connect_db();
-    my $sql = qq(select 
-        id, name, primary_attr, roles, lore,
-        str, agi, int, str_growth, agi_growth, int_growth, hp, mana, hp_regen, mana_regen, damage,
-        bat, move_speed, day_vision, night_vision, attack_range, turn_rate, missile_speed
-        from heroes
-        order by id desc);
+    my $do_nothing = sub { return $_[0] };
+    my $columns = join ',', hero_columns( $do_nothing );
+    my $sql = 'select ' . $columns . ' from heroes order by id desc';
     my $sth = $db->prepare($sql) or die $db->errstr;
     $sth->execute or die $sth->errstr;
     template 'show_heroes.tt', {
@@ -77,19 +91,13 @@ post '/add' => sub {
         send_error("Not logged in", 401);
     }
 
+    my $all_except_id = sub { return $_[0] ne 'id' ? $_[0] : undef };
+    my $all_except_id_placeholder = sub { return $_[0] ne 'id' ? '?' : undef };
+    my $columns = join ', ', hero_columns( $all_except_id );
     my $db = connect_db();
-    my $sql = qq|insert into heroes 
-        (name, primary_attr, roles, lore, str,
-         agi, int, str_growth, agi_growth, int_growth,
-         hp, mana, hp_regen, mana_regen, damage,
-         bat, move_speed, day_vision, night_vision,
-         attack_range, turn_rate, missile_speed)
-        values
-        (?, ?, ?, ?, ?,
-         ?, ?, ?, ?, ?,
-         ?, ?, ?, ?, ?,
-         ?)
-        |;
+    my $sql = 'insert into heroes (' . $columns . ')';
+    $columns = join ', ', hero_columns( $all_except_id_placeholder );
+    $sql .= ' values (' . $columns . ')';
     my $sth = $db->prepare($sql) or die $db->errstr;
     my $roles = join ',', @{ params->{'roles'} } ;
     $sth->execute(params->{'name'}, params->{'primary_attr'}, $roles, params->{'lore'}, params->{'str'},
