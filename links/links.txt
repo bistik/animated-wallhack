@@ -225,3 +225,6 @@ https://www.reddit.com/r/leagueoflegends/comments/1b7ggc/mouse_accuracy_training
 
 vim plugin perl-support
 https://github.com/WolfgangMehner/vim-plugins/tree/master/perl-support
+
+courseware
+http://ocw.mit.edu/courses/comparative-media-studies-writing/cms-611j-creating-video-games-fall-2014/projects/MITCMS_611JF14_GameEngine.pdf
